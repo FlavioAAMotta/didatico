@@ -1,12 +1,18 @@
-import { app } from "./app"
-import { signup } from './endpoints/signup'
-import { createTask } from './endpoints/createTask'
-import { getTaskById } from './endpoints/getTaskById'
-import { login } from './endpoints/login'
+import { app } from "./app";
+import { createTask } from "./endpoints/createTask";
+import { getTaskById } from "./endpoints/getTaskById";
+import { UserController } from "./controller/userController";
+import { UserData } from "./data/userData";
+import { UserBusiness } from "./business/userBusiness";
 
-app.post('/user/signup', signup)
-app.post('/user/login', login)
+const userData = new UserData();
+const userBusiness = new UserBusiness(userData);
+const userController = new UserController(userBusiness);
 
-app.put('/task', createTask)
-app.get('/task/:id', getTaskById)
+app.post("/user/signup", userController.signup);
+app.post("/user/login", userController.login);
 
+app.put("/task", createTask);
+app.get("/task/:id", getTaskById);
+
+//POST localhost:3003/user/login
