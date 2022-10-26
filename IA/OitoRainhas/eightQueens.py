@@ -1,7 +1,6 @@
 #eight queen problem
 
 import random
-import time
 
 #solution usign genetic programming
 def geneticAlgorithm(population, fitness):
@@ -58,7 +57,7 @@ def generateRandomPopulation(populationSize):
     return population
 
 #main
-population = generateRandomPopulation(100)
+population = generateRandomPopulation(100) # ['12312312','32132132',...]']
 fitness = getFitness(population)
 generation = 1
 while min(fitness.values()) > 0:
