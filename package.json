@@ -1,6 +1,10 @@
 {
   "dependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.14",
     "@types/jest": "^29.2.0",
+    "express": "^4.18.2",
     "jest": "^29.2.2",
     "ts-jest": "^29.0.3"
   }
