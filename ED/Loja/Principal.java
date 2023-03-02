@@ -1,11 +1,19 @@
 public class Principal{
    public static void main(String[] args){
+   
       Produto primeiroProduto = new Produto();
       Produto segundoProduto = new Produto();
       Produto terceiroProduto = new Produto();
       
       primeiroProduto.nome = "Biscoito";
-      segundoProduto.nome = "Queijo";
+      segundoProduto.nome = "Biscoito";
+      System.out.println(primeiroProduto == segundoProduto);
+      
+      if(primeiroProduto == segundoProduto){
+         System.out.println("Iguais");
+      }
+      
+      
       terceiroProduto.nome = "Pão";
       
       primeiroProduto.descricao = "Bis";
@@ -19,11 +27,5 @@ public class Principal{
       primeiroProduto.quantidade = 30;
       segundoProduto.quantidade = 0;
       terceiroProduto.quantidade = 200;
-      
-      System.out.println("Deve imprimir 30:" + primeiroProduto.quantidade);
-      primeiroProduto.adicionarQuantidade(20);
-      System.out.println("Deve imprimir 50:" + primeiroProduto.quantidade);
-      terceiroProduto.removerQuantidade(50);
-      System.out.println("Deve imprimir 150:" + terceiroProduto.quantidade);
    }
 }
