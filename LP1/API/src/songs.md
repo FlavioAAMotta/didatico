@@ -1,0 +1,54 @@
+# The Verve
+- Bitter Sweet Symphony
+- Lucky Man
+- The Drugs Don't Work
+- Sonnet
+- Love is Noise
+- No Knock on My Door
+- Rather Be
+- Velvet Morning
+
+# The Stone Roses
+- I Wanna Be Adored
+- She Bangs the Drums
+- Fools Gold
+- Elephant Stone
+- Sugar Spun Sister
+- Love Spreads
+- Ten Storey Love Song
+- Waterfall
+
+# Ella Fitzgerald
+- Dream A Little Dream Of Me
+- Moonlight In Vermont
+- Cheek to Cheek
+- Summertime
+- They Can't Take That Away From Me
+- I Got It Bad (And That Ain't Good)
+- I've Got You Under My Skin
+- Love is here to stay
+- The Nearness Of you
+- April In Paris
+- Can't We Be Friends
+- I'm Beginning To See The Light
+- I'm Old Fashioned
+- It's Only A Paper Moon
+- It's The Talk Of The Town
+- Just One Of Those Things
+- Let's Call The Whole Thing Off
+- All my life
+- Airmail Special
+- How High The Moon
+- Misty
+- Mack The Knife
+- Easy Living
+- Darn That Dream
+- East Of The Sun (And West Of The Moon)
+- But Not For Me
+- Bewitched
+- A-Tisket, A-Tasket
+- Into Each Life Some Rain Must Fall
+- Oh, Lady Be Good
+- Misty Blue
+- But not For me
+- All the things You are
