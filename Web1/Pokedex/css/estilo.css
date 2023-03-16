@@ -1,0 +1,10 @@
+p{
+    background-color: rgb(105, 105, 240);
+    color: green;
+    border: 3px dashed red;
+    text-align: center;
+}
+
+body{
+    background-color: fuchsia;
+}
