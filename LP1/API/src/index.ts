@@ -20,6 +20,9 @@ const getLuckyNumber = async (req: Request, res: Response) => {
 app.get("/lucky/test", (req: Request, res: Response) => {
   res.send("Hello World!");
 });
+<<<<<<< HEAD
+ 
+=======
 app.get("/lucky/:number", getLuckyNumber)
 
 
@@ -30,6 +33,7 @@ app.get("/lucky/:number", getLuckyNumber)
 
 
 
+>>>>>>> 899ae8d357e18442143b625e02f88efe8fbf428c
 
 const getAllPlaylists = async (req: Request, res: Response) => {
   try {
