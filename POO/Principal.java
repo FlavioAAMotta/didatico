@@ -1,5 +1,14 @@
 public class Principal{
    public static void main(String[] args){
+      int a = 5;
+      double b = a;
+      
+      double c = 5;
+      int d = (int) c;
+      
+      System.out.println(b);
+      System.out.println(d);
+      System.out.println(a+b);
       System.out.println(Calculadora.somar(1,2));
       System.out.println(Pessoa.nome);
       

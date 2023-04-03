@@ -34,35 +34,82 @@ public class ListaDuplamente{
       tamanho++;
    }
    
-   public NoDuplo getAt(int index){
-      if(index > tamanho){
+   public NoDuplo getAt(int indiceProcurado){
+      if(indiceProcurado > tamanho){
          System.out.println("Voce sabe contar");
          return cabecalho;
       }else{
-         int indiceProcurado = 0;
+         int indicePercorrido = 0;
          NoDuplo atual = cabecalho;
-         while(indiceProcurado < index){
+         while(indicePercorrido < indiceProcurado){
             atual = atual.getProximo();
-            indiceProcurado++;
+            indicePercorrido++;
          }
          return atual;
       }
    }
    
-   /*public void addAt(int index, double valor){
-      if(index > tamanho+1){
+   public void addAt(int indiceProcurado, double valor){
+      if(indiceProcurado > tamanho+1){
          System.out.println("Voce sabe contar");
       } //A partir daqui posso adicionar
-      else{ //Adiciona na primeira
-         TODO
+      else if(tamanho == 0){
+         addFirst(valor);
+      }else if(indiceProcurado == tamanho+1){
+         addLast(valor);
+      }else{
+         int indicePercorrido = 0;
+         NoDuplo atual = cabecalho;
+         while(indicePercorrido < indiceProcurado-1){
+            atual = atual.getProximo();
+            indicePercorrido++;
+         }
+      
+         NoDuplo novo = new NoDuplo();
+         novo.setValor(valor);
+         atual.getProximo().setAnterior(novo);
+         novo.setAnterior(atual);
+         novo.setProximo(atual.getProximo());
+         atual.setProximo(novo);
+         tamanho++;
       }
-   }*/
+   }
    
-   //public void removeLast(){}
-   //public void removeFirst(){}
-   //public void printAll(){}
-   //public void printAt(int index){}
-   //public void removeAt(int index){}
-   //public double getTotal(){}
+   public void removeLast(){
+      removeAt(tamanho);
+   }
+   
+   public void removeFirst(){
+      removeAt(1);
+   }
+   
+   public void printAll(){
+      for(int i = 1; i < tamanho; i++){
+         printAt(i);
+      }
+   }
+   
+   public void printAt(int index){
+      NoDuplo atual = getAt(index);
+      System.out.println(atual.getValor());
+   }
+   
+   public void removeAt(int index){
+      if(index > tamanho){
+         System.out.println("Erro");
+      }else{
+         NoDuplo aRemover = getAt(index);
+         aRemover.getAnterior().setProximo(aRemover.getProximo());
+         aRemover.getProximo().setAnterior(aRemover.getAnterior());
+         tamanho--;
+      }
+   }
+   public double getTotal(){
+      double total = 0;
+      for(NoDuplo atual = cabecalho.getProximo(); atual != fim ;atual = atual.getProximo()){
+         total+= atual.getValor();
+      }
+      return total;
+   }
    
 }
