@@ -1,0 +1,56 @@
+/* Estilo.css */
+
+/* Estilo do cabeçalho */
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav li {
+	margin-left: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Estilo do conteúdo principal */
+main {
+	padding: 20px;
+}
+
+.destaque {
+	background-color: #ffcc00;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.sobre {
+	background-color: #f2f2f2;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.contato {
+	background-color: #d9d9d9;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+/* Estilo do rodapé */
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
