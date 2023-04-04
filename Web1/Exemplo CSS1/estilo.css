@@ -1,5 +1,10 @@
 /* Estilo.css */
 
+/* *{
+	margin: 0px;
+	padding: 0px;
+} */
+
 /* Estilo do cabeçalho */
 header {
 	background-color: #333;
@@ -19,9 +24,24 @@ nav li {
 	margin-left: 20px;
 }
 
-nav a {
+nav a:hover {
 	color: #fff;
 	text-decoration: none;
+}
+
+.destaque {
+	background-color: red;
+	padding: 20px;
+	margin-bottom: 20px;
+	color: white;
+	width: 500px;
+}
+
+.paragrafo{
+	width: 300px;
+	border: 2px white solid;
+	padding: 10px;
+	margin: auto;
 }
 
 /* Estilo do conteúdo principal */
@@ -29,10 +49,11 @@ main {
 	padding: 20px;
 }
 
-.destaque {
+.destaque:hover {
 	background-color: #ffcc00;
 	padding: 20px;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 .sobre {
@@ -46,6 +67,7 @@ main {
 	padding: 20px;
 	margin-bottom: 20px;
 }
+
 
 /* Estilo do rodapé */
 footer {
