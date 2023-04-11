@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 150px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+        }
+
+        section {
+            width: 50vw;
+            flex-grow: 1;
+            padding: 32px;
+        }
+
+        nav {
+            width: 20vw;
+            display: flex;
+        }
+
+        a {
+            margin-top: 16px;
+        }
+
+        .nav-esq {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: crimson;
+        }
+
+        .nav-dir {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: crimson;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .icons {
+            padding: 10px 20px;
+            border: 3px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://picsum.photos/100/70">
+        <button>Logout</button>
+    </header>
+    <main>
+        <nav class="nav-esq">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+        <section>
+            <h1>Titulo</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam dolorum itaque, magni dolor et nihil
+                debitis eum accusamus dolore maxime perspiciatis excepturi delectus sequi mollitia unde rem deserunt
+                nostrum cumque nisi? Reprehenderit, placeat eos! Ratione ea vero rerum beatae. Nesciunt odio suscipit
+                officia fugit quo numquam officiis ad explicabo quod dicta libero nihil sed repudiandae tempora quos
+                rerum vel reiciendis aut distinctio reprehenderit, delectus recusandae et est minima? Voluptatibus
+                dignissimos corrupti assumenda labore eligendi possimus quo, magni illum molestiae quibusdam nostrum
+                velit ad quas, sit, earum fugit. Vitae rem repellat corporis blanditiis, commodi, nemo quos perferendis
+                modi eaque perspiciatis quae, tempora facilis quaerat illo aut placeat at voluptatibus. Aperiam suscipit
+                ratione, sit ipsam sunt ipsum aliquid! Odio eius temporibus possimus, dolorem at velit culpa, veritatis
+                fugiat, odit suscipit nihil? Earum odio excepturi numquam! Tempora nobis eum inventore. Nemo, repellat
+                odio ut esse aliquid ipsa. Doloremque fugiat laudantium aut nisi. Perferendis, sit aliquam natus tenetur
+                voluptate consequatur eveniet molestias assumenda nobis aliquid vero, deserunt sapiente id omnis!
+                Reprehenderit, molestiae quo quas illum beatae vero commodi facilis eligendi architecto asperiores
+                molestias ad repellat laudantium, earum dicta ab sed recusandae tempore deserunt nisi ratione totam
+                explicabo esse? Possimus minus numquam nostrum dolores aut deserunt laboriosam accusantium, explicabo,
+                expedita repellat asperiores eaque odio aspernatur. Laboriosam, veritatis mollitia tenetur labore
+                explicabo ex, deleniti eum qui et voluptatem ad, expedita quibusdam harum fugiat dolorum neque doloribus
+                sit illo omnis ab perferendis animi. Assumenda doloribus aliquam corrupti error nulla blanditiis fugit
+                ex, rerum, quaerat tempore veritatis impedit labore tempora nesciunt ad ipsa maxime unde similique
+                debitis atque laudantium mollitia quidem? Optio exercitationem veniam similique, dolorem omnis nisi
+                accusantium pariatur odit eveniet itaque animi voluptatum rem. Amet quaerat modi dolore quas non
+                provident odio magnam exercitationem nulla nostrum, commodi nam accusantium, tempora, quasi voluptatum
+                animi pariatur impedit recusandae. Placeat, omnis? Dignissimos repellat itaque ducimus reiciendis minima
+                eius placeat cupiditate sunt, totam iure deserunt iusto nihil quo. Dolorum corrupti laudantium unde
+                soluta blanditiis asperiores libero consequuntur quia obcaecati. Libero aspernatur laboriosam aut rem
+                commodi labore eum vitae cumque aliquid distinctio molestiae, dolorem ab magnam vel amet odit. Itaque
+                dolorem omnis enim odit minima! Et vitae aperiam tempora consectetur laborum quasi similique architecto
+                deleniti nam dolore recusandae autem, ducimus sint? Voluptatum vero, illum id amet doloribus soluta odio
+                architecto a totam provident ipsum, facilis quod corrupti fugit. Dolorum magnam vero consequatur ullam
+                vel necessitatibus aliquam nihil iure accusantium nam est laborum perferendis sit earum, provident
+                mollitia aperiam odit pariatur saepe modi obcaecati ab molestias! Iure aut animi voluptates, error
+                itaque alias, fuga natus possimus nulla nesciunt saepe odit? Quos non illum laudantium totam voluptatum
+                vitae cupiditate, molestias qui saepe, autem nobis veniam! Similique ut, inventore voluptatibus
+                perspiciatis laboriosam magni, ratione consequuntur ea eligendi sapiente pariatur mollitia ipsa a
+                maiores dicta corrupti? Nemo explicabo quas eum at harum debitis, praesentium saepe numquam hic.
+                Asperiores quae, inventore quidem officia quas recusandae nobis tempora ullam dolorum doloribus!
+                Mollitia est et reprehenderit nemo ratione magnam ipsam reiciendis architecto. Maxime voluptatem iusto
+                veritatis molestias quas?</p>
+        </section>
+        <nav class="nav-dir">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </main>
+    <footer>
+        <ul>
+            <li>Contato</li>
+            <li>Sobre nós</li>
+        </ul>
+        <div class="icons">
+            <img src="https://picsum.photos/50/50">
+            <img src="https://picsum.photos/50/50">
+            <img src="https://picsum.photos/50/50">
+        </div>
+    </footer>
+</body>
+
+</html>

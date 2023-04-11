@@ -1,7 +1,11 @@
-public class Pessoa{
+public class Pessoa implements MinhaInterface{
    public static String nome;
    private String cpf = "2";
    public static int quantidadeDeOlhos = 2;
+   
+   public void imprimeValor(double valor){
+      System.out.println(valor);
+   }
    
    public void setQuantidadeDeOlhos(int qtd){
       this.quantidadeDeOlhos = qtd;

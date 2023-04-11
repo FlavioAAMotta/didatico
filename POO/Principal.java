@@ -3,7 +3,7 @@ public class Principal{
       int a = 5;
       double b = a;
       
-      double c = 5;
+      double c = 5.2; //5.0
       int d = (int) c;
       
       System.out.println(b);
