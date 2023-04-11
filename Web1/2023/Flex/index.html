@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicios Flex</title>
+    <style>
+      header {
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+      }
+
+      footer {
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+      }
+
+      main {
+        display: flex;
+        height: 100vh;
+      }
+
+      nav {
+        border: 1px solid black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 32px;
+      }
+
+      section {
+        padding: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="https://picsum.photos/100/50" alt="Logo" />
+      <button>Logout</button>
+    </header>
+
+    <main>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+      </nav>
+
+      <section>
+        <h2>Titulo 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          quae. alias, quod, voluptatum, voluptas quas voluptate quibusdam quia
+          voluptates quos quidem. Quisquam, quae. alias, quod, voluptatum,
+          voluptas quas voluptate quibusdam quia voluptates quos quidem.Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+          alias, quod, voluptatum, voluptas quas voluptate quibusdam quia
+          voluptates quos quidem. Quisquam, quae. alias, quod, voluptatum,
+          voluptas quas voluptate quibusdam quia voluptates quos quidem.Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+          alias, quod, voluptatum, voluptas quas voluptate quibusdam quia
+          voluptates quos quidem. Quisquam, quae. alias, quod, voluptatum,
+          voluptas quas voluptate quibusdam quia voluptates quos quidem.Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+          alias, quod, voluptatum, voluptas quas voluptate quibusdam quia
+          voluptates quos quidem. Quisquam, quae. alias, quod, voluptatum,
+          voluptas quas voluptate quibusdam quia voluptates quos quidem.Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+          alias, quod, voluptatum, voluptas quas voluptate quibusdam quia
+          voluptates quos quidem. Quisquam, quae. alias, quod, voluptatum,
+          voluptas quas voluptate quibusdam quia voluptates quos quidem.
+        </p>
+      </section>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+      </nav>
+    </main>
+
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>
