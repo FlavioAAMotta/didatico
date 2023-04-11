@@ -23,6 +23,8 @@ public class ListaDuplamente{
       tamanho++;
    }
    
+   public void addSorted(double valor){}
+   
    public void addLast(double valor){
       NoDuplo novoNo = new NoDuplo();
       novoNo.setValor(valor);
@@ -47,6 +49,31 @@ public class ListaDuplamente{
          }
          return atual;
       }
+   }
+   
+   //Retorna o indice em que o valor se encontra, caso não exista retorna -1
+   // 2,7,0,-2
+   //for int i =0; i < n; i++
+   public int find(double valorProcurado){
+      int contador = 0;
+      for(NoDuplo atual = cabecalho; atual != fim; atual = atual.getProximo()){
+         if(atual.getValor() == valorProcurado){
+            return contador;
+         }
+         contador++;
+      }
+      return -1;
+   }
+   
+   public int findWithIndex(double valorProcurado){
+      NoDuplo atual = cabecalho;
+      for(int i = 0; i <= tamanho; i++){
+         if(atual.getValor() == valorProcurado){
+            return i;
+         }
+         atual = atual.getProximo();
+      }
+      return -1;
    }
    
    public void addAt(int indiceProcurado, double valor){
