@@ -5,6 +5,7 @@ public class Retangulo extends FiguraGeometrica {
         this.altura = altura;
     }
 
+    @Override
     public double calcularArea() {
         return largura * altura;
     }
