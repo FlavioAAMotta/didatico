@@ -5,5 +5,8 @@ public class Principal {
         System.out.println(r.testesFatorial());
         System.out.println(r.testesFibonacci());
         System.out.println(r.testesMultiplicacao());
+        System.out.println(r.testesDivisao());
+        System.out.println(r.testesResto());
+        System.out.println(r.testesTamanho());
     }
 }
