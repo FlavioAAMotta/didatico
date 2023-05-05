@@ -23,6 +23,7 @@ public class Arvore {
     }
   }
 
+  // Método recursivo para inserir um nó em uma árvore binária de pesquisa
   private void inserir(No atual, No novo) {
     if (novo.getValor() < atual.getValor()) {
       if (atual.getEsquerda() == null) {
@@ -38,4 +39,31 @@ public class Arvore {
       }
     }
   }
+
+  // Método iterativo para inserir um nó em uma árvore binária de pesquisa
+  public void inserirIterativo(int valor) {
+    No novoNo = new No(valor);
+    if (this.raiz == null) {
+        this.raiz = novoNo;
+    } else {
+        No atual = this.raiz;
+        No anterior;
+        while (true) {
+            anterior = atual;
+            if (valor <= atual.getValor()) {
+                atual = atual.getEsquerda();
+                if (atual == null) {
+                    anterior.setEsquerda(novoNo);
+                    return;
+                }
+            } else {
+                atual = atual.getDireita();
+                if (atual == null) {
+                    anterior.setDireita(novoNo);
+                    return;
+                }
+            }
+        }
+    }
+}
 }
