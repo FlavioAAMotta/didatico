@@ -116,4 +116,76 @@ public class Arvore {
       return false;
     }
   }
+
+  public int contarFolhas() {
+    if (raiz == null) {
+      return 0;
+    } else {
+      return contarFolhas(raiz);
+    }
+  }
+
+  private int contarFolhas(No atual) {
+    if (atual.getDireita() != null && atual.getEsquerda() != null) {
+      return (
+        contarFolhas(atual.getEsquerda()) + contarFolhas(atual.getDireita())
+      );
+    } else if (atual.getEsquerda() == null && atual.getDireita() == null) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+
+  public boolean ehDePesquisa() {
+    if (raiz == null) {
+      return true;
+    } else {
+      return ehDePesquisa(raiz);
+    }
+  }
+
+  private boolean ehDePesquisa(No atual) {
+    if (atual == null) {
+      return true;
+    } else if (
+      atual.getEsquerda() != null &&
+      atual.getEsquerda().getValor() > atual.getValor()
+    ) {
+      return false;
+    } else if (
+      atual.getDireita() != null &&
+      atual.getDireita().getValor() < atual.getValor()
+    ) {
+      return false;
+    } else {
+      return (
+        ehDePesquisa(atual.getEsquerda()) && ehDePesquisa(atual.getDireita())
+      );
+    }
+  }
+
+  public int nivelNo(int valor) {
+    if (raiz == null) {
+      return -1;
+    } else {
+      return nivelNo(raiz, valor, 0);
+    }
+  }
+
+  private int nivelNo(No atual, int valor, int nivel) {
+    if (atual == null) {
+      return -1;
+    } else if (atual.getValor() == valor) {
+      return nivel;
+    } else {
+      int nivelEsquerda = nivelNo(atual.getEsquerda(), valor, nivel + 1);
+      int nivelDireita = nivelNo(atual.getDireita(), valor, nivel + 1);
+      if (nivelEsquerda != -1) {
+        return nivelEsquerda;
+      } else {
+        return nivelDireita;
+      }
+    }
+  }
 }
