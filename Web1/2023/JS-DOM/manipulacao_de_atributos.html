@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulação de Atributos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      ol {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-position: inside;
+      }
+
+      ol > li {
+        padding: 10px 0;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Manipulação de DOM: Seleção de elementos</h1>
+      <nav>
+        <a href="index.html">Início</a> |
+        <a href="alteracao_de_conteudo.html">Alteração de Conteúdo</a> |
+        <a href="manipulacao_de_atributos.html">Manipulação de Atributos</a> |
+        <a href="manipulacao_de_estilos.html">Manipulação de Estilos</a> |
+        <a href="manipulacao_de_classes.html">Manipulação de Classes</a> |
+        <a href="criacao_e_remocao_de_elementos.html"
+          >Criação e Remoção de Elementos</a
+        >
+        | <a href="navegacao_no_dom.html">Navegação no DOM</a> |
+        <a href="eventos.html">Eventos</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Lista de Compras</h2>
+      <ul id="shopping-list">
+        <li class="item" data-quantity="0">
+          Leite <span class="quantity">0</span
+          ><button onclick="incrementQuantity(this)">+</button>
+          <button onclick="decrementQuantity(this)">-</button>
+        </li>
+        <li class="item" data-quantity="0">
+          Ovos <span class="quantity">0</span
+          ><button onclick="incrementQuantity(this)">+</button>
+          <button onclick="decrementQuantity(this)">-</button>
+        </li>
+        <li class="item" data-quantity="0">
+          Pão <span class="quantity">0</span
+          ><button onclick="incrementQuantity(this)">+</button>
+          <button onclick="decrementQuantity(this)">-</button>
+        </li>
+        <li class="item" data-quantity="0">
+          Café <span class="quantity">0</span
+          ><button onclick="incrementQuantity(this)">+</button>
+          <button onclick="decrementQuantity(this)">-</button>
+        </li>
+        <li class="item" data-quantity="0">
+          Açúcar <span class="quantity">0</span
+          ><button onclick="incrementQuantity(this)">+</button>
+          <button onclick="decrementQuantity(this)">-</button>
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <p>Desenvolvido por Flávio Motta - Faminas</p>
+    </footer>
+    <script>
+      function incrementQuantity(button) {
+        var listItem = button.parentNode;
+        var quantity = parseInt(listItem.getAttribute("data-quantity"));
+        listItem.setAttribute("data-quantity", quantity + 1);
+        listItem.querySelector(".quantity").textContent = quantity + 1;
+      }
+
+      function decrementQuantity(button) {
+        var listItem = button.parentNode;
+        var quantity = parseInt(listItem.getAttribute("data-quantity"));
+        if (quantity > 0) {
+          listItem.setAttribute("data-quantity", quantity - 1);
+          listItem.querySelector(".quantity").textContent = quantity - 1;
+        }
+      }
+    </script>
+  </body>
+</html>
