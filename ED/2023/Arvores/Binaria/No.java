@@ -2,11 +2,13 @@ public class No{
     private No esquerda;
     private No direita;
     private int valor;
+    private int fatorBalanceamento;
 
     public No(int valor){
         this.valor = valor;
         this.esquerda = null;
         this.direita = null;
+        this.fatorBalanceamento = 0;
     }
 
     public int getValor(){
@@ -29,6 +31,12 @@ public class No{
     }
     public No getDireita(){
         return this.direita;
+    }
+    public void setFator(int fator){
+        this.fatorBalanceamento = fator;
+    }
+    public int getFator(){
+        return this.fatorBalanceamento;
     }
 
     

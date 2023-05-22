@@ -38,6 +38,7 @@ public class Arvore {
         inserir(atual.getDireita(), novo);
       }
     }
+    atual.setFator(altura(atual.getDireita()) - altura(atual.getEsquerda()));
   }
 
   public No buscar(int valor) {
@@ -151,6 +152,24 @@ public class Arvore {
       return true;
     } else {
       return false;
+    }
+  }
+
+  private int altura() {
+    if (raiz == null) {
+      return -1;
+    } else {
+      altura(raiz);
+    }
+  }
+
+  public int altura(No atual) {
+    if (atual == null) {
+      return -1;
+    } else {
+      return (
+        Math.max(altura(atual.getEsquerda()), altura(atual.getDireita())) + 1
+      );
     }
   }
 }
