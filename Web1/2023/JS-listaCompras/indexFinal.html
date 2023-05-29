@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="js.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Minha Lista de Compras</h1>
+      <input type="text" id="itemInput" placeholder="Digite um item" />
+      <div id="extra-buttons">
+        <button id="checkAllButton" onclick="checkAll()" class="extra-button">
+          Marcar Todos
+        </button>
+        <button
+          id="removeChecked"
+          onclick="removeChecked()"
+          class="extra-button"
+        >
+          Remover Marcados
+        </button>
+        <button id="sortButton" onclick="sortList()" class="extra-button">
+          Ordenar
+        </button>
+        <label for="searchInput">Pesquisar:</label>
+        <input
+          type="text"
+          id="searchInput"
+          onkeyup="searchList()"
+          placeholder="Digite um item"
+        />
+      </div>
+      <button id="addItemButton" onclick="addItem()">Adicionar Item</button>
+      <ul id="shoppingList"></ul>
+    </main>
+  </body>
+</html>
