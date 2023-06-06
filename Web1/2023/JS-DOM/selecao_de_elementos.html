@@ -99,7 +99,10 @@
       <button id="query" onclick="selectByQuery()">Selecionar por Query</button>
       <button id="queryAll" onclick="selectAllByQuery()">
         Selecionar Todos por Query
-      </button>
+      </button><br>
+      <input type="number" id="numero">
+      <input type="number" id="numero2">
+      <button onclick="exibeNumero()">Exibir</button>
     </main>
 
     <footer>
@@ -107,16 +110,25 @@
     </footer>
 
     <script>
+      function exibeNumero(){
+        let numero = Number(document.getElementById("numero").value);
+        let numero2 = Number(document.getElementById("numero2").value);
+        alert(numero + numero2);
+      }
+
       function selectById() {
         const list = document.getElementById("shopping-list");
+        // console.log(list);
         alert(list.innerHTML);
         alert(list.innerText);
       }
 
       function selectByClass() {
         const list = document.getElementsByClassName("item");
-        alert(list[0].innerHTML);
-        alert(list[0].innerText);
+        alert(list[1].innerHTML);
+        // console.log(list)
+        // alert(list.innerHTML);
+        // alert(list.innerText);
       }
 
       function selectByTag() {
@@ -131,6 +143,8 @@
         alert(list.innerHTML);
         const item = document.querySelector("#shopping-list > li");
         alert(item.innerHTML);
+        const outroItem = document.querySelector(".item");
+        console.log(outroItem);
       }
 
       function selectAllByQuery() {

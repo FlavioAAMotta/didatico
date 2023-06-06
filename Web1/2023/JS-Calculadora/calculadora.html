@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="calculo.js"></script>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" id="num1">
+    <select id="op">
+        <option value="">--Selecione uma operação--</option>
+        <option value="add">Adição</option>
+        <option value="sub">Subtração</option>
+        <option value="mul">Multiplacação</option>
+        <option value="div">Divisão</option>
+    </select>
+    <input type="number" id="num2">
+    <button onclick="calcular()">Calcular</button>
+    <input type="number" id="result" readonly>
+</body>
+</html>
