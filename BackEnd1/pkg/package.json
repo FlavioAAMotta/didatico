@@ -1,0 +1,13 @@
+{
+  "name": "pkg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear && node ./index.js",
+    "serve": "clear && echo “Hello” && node ./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
