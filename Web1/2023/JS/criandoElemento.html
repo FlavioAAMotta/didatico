@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criacao de elemento</title>
+</head>
+<body>
+    <ol id="lista">
+        <li id="item1">Item 1</li>
+        <li id="item2">Item 2</li>
+        <li id="item3">Item 3</li>
+    </ol>
+    Digite o item: <input type="text">
+    <button onclick="adicionarItem()">Adicionar</button>
+
+    <script>
+        function adicionarItem(){
+            let numeroDeItens = document.getElementsByTagName("li").length;
+            let textoItemNovo = document.getElementsByTagName("input")[0];
+            let elementoNovo = document.createElement("li");
+            let lista = document.getElementById("lista");
+            
+            elementoNovo.innerHTML = textoItemNovo.value;
+            elementoNovo.id = `item${++numeroDeItens}`;
+            lista.appendChild(elementoNovo);
+            textoItemNovo.value = "";
+        }
+    </script>
+</body>
+</html>
