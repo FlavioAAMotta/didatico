@@ -18,8 +18,14 @@ app.get("/users", (req, res) => {
 });
 
 app.get("/users/:userId", (req, res) => {
-  const user = users.find((u) => u.id === req.params.userId);
-  res.status(200).send(user);
+  // const user = users.find((user) => user.id === req.params.userId);
+  const userId = req.params.userId;
+  for(let i = 0; i < users.length; i++){
+    if(users[i].id === userId){
+      res.status(200).send(users[i]);
+    }
+  }
+  res.status(404).send("Id inexistente")
 });
 
 app.post("/users/:userId/playlists", (req, res) => {
@@ -30,7 +36,7 @@ app.post("/users/:userId/playlists", (req, res) => {
       throw new Error("User not found");
     }
     if (!req.body.name) {
-      res.statusCode = 400;
+      res.statusCode = 422;
       throw new Error("Missing name");
     }
     const newPlaylist = {
@@ -39,7 +45,7 @@ app.post("/users/:userId/playlists", (req, res) => {
       tracks: [],
     };
     users[userIndex].playlists.push(newPlaylist);
-    res.status(200).send("Playlist created successfully");
+    res.status(201).send("Playlist created successfully");
   } catch (error: any) {
     res.send(error.message);
   }

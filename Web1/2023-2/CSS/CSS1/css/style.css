@@ -1,0 +1,17 @@
+p {
+    color: red;
+    font-size: 16px;
+}
+
+.borda-vermelha {
+    border: 1px red solid;
+}
+
+.texto-verde {
+    color: green;
+}
+
+#texto-primario {
+    color: green;
+    border: 1px dotted black;
+}
