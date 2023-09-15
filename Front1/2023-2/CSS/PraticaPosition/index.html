@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercício de Position</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho fixo no topo */
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ff0000;
+    z-index: 9999; /* Valor alto para garantir que fique no topo */
+}
+
+/* Rodapé fixo na parte inferior */
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+/* Contêiner com position relative */
+#container {
+    position: relative;
+    margin-top: 50px; /* Espaço para o cabeçalho */
+    margin-bottom: 50px; /* Espaço para o rodapé */
+    border: 1px solid #000000;
+}
+
+/* Elemento de destaque com position absolute */
+#highlight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: yellow;
+}
+    </style>
+  </head>
+  <body>
+    <div id="header">Cabeçalho</div>
+
+    <div id="container">
+      <div id="content">Conteúdo</div>
+      <div id="highlight">Destaque</div>
+    </div>
+
+    <div id="footer">Rodapé</div>
+  </body>
+</html>

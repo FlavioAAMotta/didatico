@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  /* Estilos para o cartão de perfil */
+  .profile-card {
+    width: 300px;
+    margin: 2em auto;  /* Margin para centralizar */
+    padding: 1em;  /* Padding interno */
+    border: 2px solid #ccc;  /* Borda */
+    border-radius: 10px;  /* Cantos arredondados */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Estilo para a imagem de perfil */
+  .profile-card img {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  /* Estilos para os ícones das redes sociais */
+  .social-icons {
+    display: flex;  /* Alinhar ícones inline */
+    justify-content: center;  /* Centralizar */
+    margin-top: 1em;  /* Espaço acima */
+  }
+
+  .social-icons a {
+    margin: 0 0.5em;  /* Margin entre ícones */
+    text-decoration: none;
+  }
