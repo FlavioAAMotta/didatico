@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .filho2{
+            align-self: center;
+            /* border: 1px solid red; */
+        }
+        .container{
+            width: 500px;
+            height: 250px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .container-img{
+            width: 50%;
+            height: 250px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-img">
+        <img src="https://picsum.photos/150" alt="img aleatoria">
+        <img src="https://picsum.photos/150" alt="img aleatoria">
+        <img src="https://picsum.photos/150" alt="img aleatoria">
+        <img src="https://picsum.photos/150" alt="img aleatoria">
+    </div>
+    <br>
+    <div class="container">
+        <div class="filho">1</div>
+        <div class="filho2">2</div>
+        <div class="filho">3</div>
+        <div class="filho">4</div>
+    </div>
+</body>
+</html>

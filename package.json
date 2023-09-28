@@ -12,5 +12,24 @@
     "jsonwebtoken": "^8.5.1",
     "ts-jest": "^29.0.3",
     "typescript": "^4.9.5"
-  }
+  },
+  "name": "didatico",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlavioAAMotta/didatico.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlavioAAMotta/didatico/issues"
+  },
+  "homepage": "https://github.com/FlavioAAMotta/didatico#readme"
 }

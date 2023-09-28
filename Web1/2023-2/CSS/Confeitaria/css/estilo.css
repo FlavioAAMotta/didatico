@@ -1,0 +1,89 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 300px 1fr;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: mediumvioletred;
+    grid-column: 1 / -1;
+    padding: 10px;
+}
+
+.img{
+    width: 30px;
+}
+
+.img-texto{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button{
+    padding: 6px;
+}
+
+nav{
+    background-color: #f2d0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.botao-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    padding: 8px;
+}
+
+.botao-compra{
+    width: 100%;
+    border: none;
+    background-color: mediumvioletred;
+}
+.botao-compra:hover{
+    border: 1px solid mediumvioletred;
+    background-color: white;
+    cursor: pointer;
+}
+
+.card-produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 3px 2px mediumvioletred;
+    height: 250px;
+}
+
+.imagem-produto{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    background-color: mediumvioletred;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / -1;
+}
+

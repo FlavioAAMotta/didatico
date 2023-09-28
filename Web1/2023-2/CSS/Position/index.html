@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        div {
+            position: static;
+        }
+
+        body {
+            height: 3000px;
+        }
+
+        .vermelho {
+            width: 600px;
+            height: 400px;
+            background-color: red;
+            position: relative;
+            top: 150px;
+        }
+
+        .verde {
+            width: 400px;
+            height: 250px;
+            background-color: green;
+            position: relative;
+            top: -100px;
+            left: 200px;
+        }
+
+        .amarelo {
+            width: 100vw;
+            height: 150px;
+            background-color: yellow;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+
+        .azul {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vermelho"></div>
+    <div class="verde">
+        <div class="azul"></div>
+    </div>
+    <div class="amarelo"></div>
+</body>
+
+</html>
