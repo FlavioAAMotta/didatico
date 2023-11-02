@@ -6,7 +6,9 @@ mkdir $project_name
 cd $project_name
 
 npm init -y
-npm install express knex mysql cors dotenv
+echo "Digite o banco de dados que será utilizado no knex:"
+read database_name
+npm install express knex $database_name cors dotenv
 npm install typescript ts-node-dev @types/node @types/express @types/cors --save-dev
 
 cat > tsconfig.json <<EOL
@@ -29,14 +31,24 @@ EOL
 mkdir src
 touch src/index.ts
 
+declare -A database_stats
+database_stats=([host]="" [port]="" [user]="" [password]="" [database]="")
+echo "Digite os dados para conexão com o banco de dados:"
+for name_stats in host port user password database
+do
+  echo "$name_stats:"
+  read database_stats[${name_stats}]
+done
+
 cat > src/connection.ts <<EOL
 import knex from 'knex';
+import 'dotenv/config'
 
 const connection = knex({
-    client: "mysql",
+    client: "$database_name",
     connection: {
         host: process.env.DB_HOST,
-        port: 3306,
+        port: ${database_stats[port]},
         user: process.env.DB_USER,
         password: process.env.DB_PASSWORD,
         database: process.env.DB_NAME,
@@ -87,10 +99,10 @@ EOL
 
 cat > .env <<EOL
 PORT=3003
-DB_HOST=localhost
-DB_USER=your_username
-DB_PASSWORD=your_password
-DB_NAME=your_database
+DB_HOST=${database_stats[host]}
+DB_USER=${database_stats[user]}
+DB_PASSWORD=${database_stats[password]}
+DB_NAME=${database_stats[database]}
 EOL
 
 sed -i '/"scripts": {/a \  "dev": "tsnd src/index.ts",' package.json
