@@ -1,0 +1,20 @@
+{
+  "name": "async-await-promises",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "ex1": "tsc && node build/ex1.js",
+    "ex2": "tsc && node build/ex2.js",
+    "ex3": "tsc && node build/ex3.js",
+    "ex4": "tsc && node build/ex4.js"
+  },
+  "author": "Labenu",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.2",
+    "@types/axios": "^0.14.0"
+  }
+}
