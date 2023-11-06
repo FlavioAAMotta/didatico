@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Galeria de Imagens Interativa</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .thumbnail {
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+      }
+      #featured-img-container {
+        text-align: center;
+      }
+      #featured-img {
+        width: 80%;
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gallery-container">
+      <img
+        class="thumbnail"
+        src="imgs/07-copy.png"
+        alt="Imagem 1"
+        onclick="updateFeaturedImage('imgs/07-copy.png')"
+      />
+      <img
+        class="thumbnail"
+        src="imgs/af13c9415f8eaef383a90e087cc0e8e5.jpg"
+        alt="Imagem 2"
+        onclick="updateFeaturedImage('imgs/af13c9415f8eaef383a90e087cc0e8e5.jpg')"
+      />
+      <img
+        class="thumbnail"
+        src="imgs/caneca_nao_desanime_com_a_derrota_2433_1_125b6322ef8c273ad7181d66a1492c97.webp"
+        alt="Imagem 3"
+        onclick="updateFeaturedImage('imgs/caneca_nao_desanime_com_a_derrota_2433_1_125b6322ef8c273ad7181d66a1492c97.webp')"
+      />
+      <img
+        class="thumbnail"
+        src="imgs/D9S5B9YWsAEWLqW.png"
+        alt="Imagem 4"
+        onclick="updateFeaturedImage('imgs/D9S5B9YWsAEWLqW.png')"
+      />
+      <img
+        class="thumbnail"
+        src="imgs/download.jpg"
+        alt="Imagem 5"
+        onclick="updateFeaturedImage('imgs/download.jpg')"
+      />
+      <img
+        class="thumbnail"
+        src="imgs/download.png"
+        alt="Imagem 6"
+        onclick="updateFeaturedImage('imgs/download.png')"
+      />
+      <img
+        class="thumbnail"
+        src="imgs/f8cf600d68d03a65007fbeda66d0f1af.jpg"
+        alt="Imagem 7"
+        onclick="updateFeaturedImage('imgs/f8cf600d68d03a65007fbeda66d0f1af.jpg')"
+      />
+    </div>
+
+    <div id="featured-img-container">
+      <img id="featured-img" src="" alt="Imagem em destaque" />
+    </div>
+
+    <script>
+      function updateFeaturedImage(src) {
+        // Seleciona o contêiner da imagem em destaque
+        const featuredImgContainer = document.getElementById("featured-img");
+        // Atualiza o src da imagem em destaque
+        featuredImgContainer.src = src;
+        // Atualiza o alt da imagem em destaque
+        featuredImgContainer.alt = document.querySelector(
+          '[src="' + src + '"]'
+        ).alt;
+      }
+    </script>
+  </body>
+</html>
