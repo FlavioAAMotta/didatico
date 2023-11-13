@@ -1,0 +1,1 @@
+export const baseURL: string = 'https://jgk503d1d7.execute-api.us-east-1.amazonaws.com/default';
