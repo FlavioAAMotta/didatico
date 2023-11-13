@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Roboto, sans-serif;
+    background-color: #3e9a7b;
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo{
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    width: 80%;
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+li{
+    width: 100%;
+    border: 1px solid #4dd5f4;
+    background-color: #4dd5f4;
+    border-radius: 5px;
+    color: white;
+    padding: 14px 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+li:hover{
+    background-color: #3ec0e0;
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+.main-container{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#item{
+    width: 62%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+#quantity{
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+#add-button{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #4dd5f4;
+    color: white;
+}
+
+#add-button:hover{
+    background-color: #3ec0e0;
+}
