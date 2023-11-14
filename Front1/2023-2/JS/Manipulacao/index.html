@@ -1,0 +1,21 @@
+<body>
+    <div id="lista">
+        <h2>Lista de Itens</h2>
+    </div>
+    <button onclick="adicionarItem()">Adicionar Item</button>
+    <button onclick="removerUltimoItem()">Remover Último Item</button>
+    <script>
+        var contador = 0;
+        function adicionarItem() {
+            var novoItem = document.createElement('p');
+            novoItem.textContent = 'Item ' + (++contador);
+            document.getElementById('lista').appendChild(novoItem);
+        }
+        function removerUltimoItem() {
+            var lista = document.getElementById('lista');
+            if (lista.lastChild.nodeName === 'P') {
+                lista.removeChild(lista.lastChild);
+            }
+        }
+    </script>
+</body>
