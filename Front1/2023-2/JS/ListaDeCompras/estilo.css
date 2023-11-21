@@ -1,0 +1,33 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #3e9a7b;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo{
+    width: 200px;
+}
+
+li{
+    width: 100%;
+    border: 1px solid #4dd5f4;
+    background-color: #4dd5f4;
+    border-radius: 5px;
+    color: white;
+    padding: 14px 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.checked{
+    text-decoration: line-through;
+}

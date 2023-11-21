@@ -3,6 +3,7 @@ import connection from "../connection";
 import { user } from "../types";
 import { generateId } from "../services/IdGenerator";
 import { Authenticator } from "../services/Authenticator";
+import { hash } from "../services/HashManager";
 
 export default async function createUser(
    req: Request,
@@ -10,7 +11,7 @@ export default async function createUser(
 ): Promise<void> {
    try {
 
-      const { name, nickname, email, password } = req.body
+      const { name, nickname, email, password, role } = req.body
 
       if (!name || !nickname || !email || !password) {
          res.statusCode = 422
@@ -19,6 +20,7 @@ export default async function createUser(
 
       const [user] = await connection('to_do_list_users')
          .where({ email })
+      console.log(role)
 
       if (user) {
          res.statusCode = 409
@@ -26,14 +28,14 @@ export default async function createUser(
       }
 
       const id: string = generateId();
-
-      const newUser: user = { id, name, nickname, email, password }
+      const cypherPassword = await hash(password);
+      const newUser: user = { id, name, nickname, email, password: cypherPassword, role }
 
       await connection('to_do_list_users')
          .insert(newUser)
 
       const authenticator = new Authenticator();
-      const token = authenticator.generateToken({ id })
+      const token = authenticator.generateToken({ id, role })
 
       res.status(201).send(token)
 
