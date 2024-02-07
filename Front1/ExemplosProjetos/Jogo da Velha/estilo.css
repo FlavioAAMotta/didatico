@@ -1,0 +1,49 @@
+.velha{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-gap: 0px;
+}
+
+.celula{
+    border: 1px solid #000;
+    width: 100px;
+    height: 100px;
+    border-right: 1px solid #000;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.celula:nth-child(3n){
+    border-right: none;
+}
+
+.celula:nth-child(n+7){
+    border-bottom: none;
+    border-top: none;
+}
+
+.celula:nth-child(1n){
+    border-left: none;
+}
+
+.celula:nth-child(-n+3){
+    border-top: none;
+}
+
+.celula:hover{
+    background-color: #ccc;
+}
+
+.x{
+    width: 100%;
+}

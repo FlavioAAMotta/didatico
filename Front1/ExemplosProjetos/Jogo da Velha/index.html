@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Velha</h1>
+        <p id="jogadorAtual">Vez do jogador: X</span></p>
+        <div class="resultado"></div>
+        <div class="velha">
+            <div class="celula" id="cel00" onclick="jogar(0,0)">
+            </div>
+            <div class="celula" id="cel01" onclick="jogar(0,1)"></div>
+            <div class="celula" id="cel02" onclick="jogar(0,2)"></div>
+            <div class="celula" id="cel10" onclick="jogar(1,0)"></div>
+            <div class="celula" id="cel11" onclick="jogar(1,1)"></div>
+            <div class="celula" id="cel12" onclick="jogar(1,2)"></div>
+            <div class="celula" id="cel20" onclick="jogar(2,0)"></div>
+            <div class="celula" id="cel21" onclick="jogar(2,1)"></div>
+            <div class="celula" id="cel22" onclick="jogar(2,2)"></div>
+        </div>
+        <button class="reiniciar" onclick="reiniciar()">Reiniciar</button>
+    <script src="script.js"></script>
+</body>
+</html>
