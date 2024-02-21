@@ -1,3 +1,5 @@
+# Modelo de regressão linear porém com validação (não faz sentido usar validação com regressão linear, mas é um exemplo)
+
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
