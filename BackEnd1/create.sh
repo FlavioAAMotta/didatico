@@ -2,13 +2,21 @@
 
 echo "Digite o nome do projeto:"
 read project_name
-mkdir $project_name
-cd $project_name
+mkdir "$project_name" && cd "$project_name" || exit
 
 npm init -y
 echo "Digite o banco de dados que será utilizado no knex:"
-read database_name
-npm install express knex $database_name cors dotenv
+echo "1. MySql"
+echo "2. PostgreSQL"
+read -r tipo_base 
+
+if [[ $tipo_base == 1 ]]; then  
+  database_name="mysql"  
+else
+  database_name="postgresql"
+fi
+
+npm install express knex "$database_name" cors dotenv
 npm install typescript ts-node-dev @types/node @types/express @types/cors --save-dev
 
 cat > tsconfig.json <<EOL
@@ -30,14 +38,14 @@ EOL
 
 mkdir src
 touch src/index.ts
+mkdir -p src/{business,controller,data,model,routes,services,types,utils}
 
 declare -A database_stats
 database_stats=([host]="" [port]="" [user]="" [password]="" [database]="")
 echo "Digite os dados para conexão com o banco de dados:"
 for name_stats in host port user password database
 do
-  echo "$name_stats:"
-  read database_stats[${name_stats}]
+  read -p "$name_stats: " database_stats["$name_stats"]
 done
 
 cat > src/connection.ts <<EOL
@@ -53,6 +61,9 @@ const connection = knex({
         password: process.env.DB_PASSWORD,
         database: process.env.DB_NAME,
         multipleStatements: true
+    }, pool:{
+      min:2,
+      max:10
     }
 })
 
