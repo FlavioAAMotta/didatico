@@ -35,9 +35,12 @@ temperaturas = np.linspace(df['Temperatura (C)'].min(), df['Temperatura (C)'].ma
 # Loop para testar ambos os modelos
 for incluir_quadrado in [False, True]:
     X_treino = treino[['Temperatura (C)']].copy()
+    X_teste = teste[['Temperatura (C)']].copy()
     if incluir_quadrado:
         X_treino['Temperatura²'] = X_treino['Temperatura (C)'] ** 2
+        X_teste['Temperatura²'] = X_teste['Temperatura (C)'] ** 2
     y_treino = treino['Qtd Sorvete Vendidos (unidades)']
+    y_teste = teste['Qtd Sorvete Vendidos (unidades)']
     modelo = LinearRegression()
     modelo.fit(X_treino, y_treino)
     if incluir_quadrado:
@@ -46,7 +49,9 @@ for incluir_quadrado in [False, True]:
         print(f"Modelo Linear Simples: y = {modelo.coef_[0]:.2f}x + {modelo.intercept_:.2f}")
 
     r2_treino = r2_score(y_treino, modelo.predict(X_treino))
+    r2_teste = r2_score(y_teste, modelo.predict(X_teste))
     print(f'R² treino: {r2_treino:.2f} (incluir quadrado da temperatura: {incluir_quadrado})')
+    print(f'R² teste: {r2_teste:.2f} (incluir quadrado da temperatura: {incluir_quadrado})')
     
     # Preparando os dados para plotagem
     if incluir_quadrado:
