@@ -3,10 +3,11 @@ public class Principal{
       int numero = 1;
       Lista alunos = new Lista();
       Lista professores = new Lista();
-      alunos.adicionarComeco("João");
+      alunos.adicionarComeco("Joao");
       alunos.adicionarComeco("Micael");
       alunos.adicionarComeco("Pedro");
       alunos.adicionarComeco("Marco");
-      System.out.print("");
+      alunos.adicionarUltimoElemento("Lucas");
+      alunos.imprimirLista();
    }
 }
