@@ -13,18 +13,24 @@ public class ListaDuplamenteEncadeada {
         No novoNo = new No(valor);
         No anterior = cauda.anterior;
         
-        //Trecho Faltante
-        //Trecho Faltante
-        //Trecho Faltante
-        //Trecho Faltante
+        novoNo.proximo = cauda;
+        novoNo.anterior = anterior;
+        cauda.anterior = novoNo;
+        anterior.proximo = novoNo;
     }
 
     public String removerDoFinal() {
+        if(cabeca.proximo == cauda){
+            System.out.println("Lista vazia");
+            return "-1";
+        }
         No anterior = cauda.anterior.anterior;
         No noRemovido = cauda.anterior;
-        //Trecho Faltante
-        //Trecho Faltante
-        //Trecho Faltante
+
+        anterior.proximo = cauda;
+        cauda.anterior = anterior;
+
+        return noRemovido.valor;
     }
 
     public String toString() {
