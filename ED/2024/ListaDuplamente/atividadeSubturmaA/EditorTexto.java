@@ -1,5 +1,3 @@
-import java.util.Stack;
-
 class EditorTexto {
     ListaDuplamenteEncadeada documento;
     ListaDuplamenteEncadeada historicoRefazer;
@@ -10,20 +8,20 @@ class EditorTexto {
     }
 
     public void inserirTexto(String texto) {
-        //Trecho Faltante
+        documento.inserirNoFinal(texto);
     }
 
     public void ctrlZ() {
         if (!documento.isEmpty()) {
-            //Trecho Faltante
-            //Trecho Faltante
+            String removida = documento.removerDoFinal();
+            historicoRefazer.inserirNoFinal(removida);
         }
     }
 
     public void ctrlY() {
         if (!historicoRefazer.isEmpty()) {
-            //Trecho Faltante
-            //Trecho Faltante
+            String refeita = historicoRefazer.removerDoFinal();
+            documento.inserirNoFinal(refeita);
         }
     }
 
