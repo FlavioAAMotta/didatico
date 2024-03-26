@@ -1,0 +1,23 @@
+.rel{
+    background-color: aqua;
+    width: 50vw;
+}
+.abs{
+    background-color: aqua;
+    width: 150px;
+}
+
+#txt1{
+    width: 90%;
+    background-color: yellow;
+}
+
+body{
+    background-color: brown;
+    margin: 0px;
+}
+
+nav{
+    background-color: deeppink;
+    display: block;
+}

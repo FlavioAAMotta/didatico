@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .container{
+            width: 100vw;
+            /* height: 400px; */
+            display: flex;
+            flex-direction: row;
+            background-color: blanchedalmond;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        div{
+            /* height: 50px; */
+            /* margin: 5px; */
+            /* border: 1px solid black; */
+        }
+
+        .borda-verde{
+            /* border: 1px solid green; */
+        }
+
+        #link{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            width: 300px;
+        }
+        
+        .icon{
+            width: 50px;
+            padding: 5px;
+        }
+        
+        .link{
+            margin: 0px 5px;
+            height: 100%;
+            /* border: 1px solid black; */
+            padding: 30px 0px;
+        }
+
+        .link:hover{
+            background-color: aliceblue;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="borda-verde">LOGO</p>
+        <div class="borda-verde" id="link">
+            <div class="borda-verde link">Texto1</div>
+            <div class="borda-verde link">Texto2</div>
+            <div class="borda-verde link">Texto3</div>
+            <img class="icon" src="car.png" alt="Carrinho de compras">
+        </div>
+    </div>
+</body>
+</html>
