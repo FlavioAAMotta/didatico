@@ -1,0 +1,27 @@
+.impares {
+    background-color: red;
+    border: 1px solid black;
+}
+
+.pares {
+    background-color: green;
+    border: 1px dotted rgb(123, 213, 234);
+}
+
+.fundo-laranja {
+    background-color: orange;
+    border: 1px solid black;
+}
+
+.texto-branco {
+    color: white;
+}
+
+#txt2 {
+    color: blueviolet;
+}
+
+#texto-link {
+    margin: 20px;
+    padding: 30px;
+}

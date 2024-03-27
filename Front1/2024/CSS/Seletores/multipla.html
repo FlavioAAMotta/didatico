@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1.texto {
+            color: green;
+            border: 1px dotted black;
+        }
+
+        h1, h2, a.link {
+            background-color: orange;
+        }
+
+        .container{
+            width: 500px;
+            height: 400px;
+            border: 1px solid black;
+        }
+
+        div > p {
+            background-color: green;
+        }
+
+        div:hover{
+            background-color: red;
+            height: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 class="texto">Texto 1</h1>
+    <h1>Texto 2</h1>
+    <h1 class="texto">Texto verde</h1>
+    <h2>Texto 3</h2>
+    <p class="texto">Texto 4</p>
+    <a>sem link</a>
+    <a class="link">com link</a>
+
+    <div class="container">
+        <a>Link 1</a>
+        <span>
+            <p>Descrição do link</p>
+        </span>
+        <a>Link 2</a>
+        <a>Link 3</a>
+
+        <p>LTDA</p>
+    </div>
+
+    <div>
+        <p>Texto verde</p>
+    </div>
+</body>
+
+</html>
