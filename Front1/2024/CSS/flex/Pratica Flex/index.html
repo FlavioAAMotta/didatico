@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercício - Flexbox</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        background-color: #161c2c;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
+        padding: 0px 16px;
+      }
+      a:hover {
+          background-color: #637473;
+        }
+      nav {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./img/8011901.jpg" alt="logo" />
+      <nav>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </nav>
+    </header>
+  </body>
+</html>
