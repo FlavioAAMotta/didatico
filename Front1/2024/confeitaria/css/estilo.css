@@ -1,0 +1,96 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: mediumvioletred;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.img-texto{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+button{
+  padding: 8px;
+}
+
+nav{
+  display: flex;
+  flex-direction: column;
+  background-color: #f2d0e0;
+  justify-content: flex-start;
+  width: 300px;
+}
+
+.icone-texto-seta{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.icone-texto{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+section{
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(4, 1fr);
+  padding: 8px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.produto-img{
+  width: 150px;
+}
+
+.btn-compra{
+  background-color: mediumvioletred;
+  color: white;
+  border: 0px;
+  cursor: pointer;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px 1px mediumvioletred;
+  width: 150px;
+}
+
+main{
+  display: flex;
+}
