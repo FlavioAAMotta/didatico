@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flex-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            background-color: #2196F3;
+            padding: 10px;
+            height: 100vh;
+        }
+        .flex-footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2196F3;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-header">
+        <h1>Header</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+
+    <div class="grid-container">
+        <div class="navegacao">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="conteudo">
+            <h2>Conteúdo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit </p>
+            <
+        </div>
+    </div>
+
+    <div class="flex-footer">
+        <h1>Footer</h1>
+    </div>
+    
+</body>
+</html>
