@@ -108,10 +108,11 @@ def printPopulationWithFitness(population):
         print(individual, fitness[individual])
 
 #main
+
 population = generateRandomPopulation(10) # ['12312312','32132132',...]']
 fitness = getFitness(population)
 generation = 0
-while generation < 100:
+while generation < 50:
     population = geneticAlgorithm(population)
     fitness = getFitness(population)
     print("Generation: ", generation, " Best: ", min(fitness.values()))
