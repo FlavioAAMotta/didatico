@@ -95,7 +95,6 @@ public class PG {
             if (erro < melhorErro) {
                 melhorErro = erro;
             }
-            System.out.println("Erro da árvore " + i + ": " + erro + " de tamanho " + populacao[i].getTamanho());
         }
         return melhorErro;
     }
@@ -188,14 +187,14 @@ public class PG {
         double[][] dadosTeste = separarDados(dados, usado, 2);
         
         // Agora vamos criar a população inicial
-        Arvore[] populacao = inicializarPopulacao(100, 5);
+        Arvore[] populacao = inicializarPopulacao(100, 8);
 
         double melhorErro = avaliarPopulacao(populacao, dadosTreino);
         int geracao = 0;
-        System.out.println("Geracao: " + geracao + " Melhor erro: " + melhorErro);
+        System.out.println("Geracao: " + geracao++ + " Melhor erro: " + melhorErro);
 
 
-        while (geracao < 100) {
+        while (geracao < 50) {
             // Selecionar os melhores indivíduos
             Arvore[] melhores = new Arvore[10];
             Arvore[] prole = new Arvore[10];
