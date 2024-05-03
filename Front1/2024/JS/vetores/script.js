@@ -28,6 +28,20 @@
 //     console.log(numeros[i]);
 // }
 
-let valores = [4,5,3,2,4,4]; // 22
+let valores = [4,5,3,2,9,1]; // 22
 
-///Exercício para imprimir a soma dos valores do vetor.
+///Escreva uma função que recebe um vetor e retornar ele invertido
+
+function inverteVetor(vetor){
+    let intermediaria;
+    let meioVetor = Math.floor(vetor.length / 2);
+
+    for(let i = 0; i < meioVetor; i++){
+        intermediaria = vetor[i];
+        vetor[i] = vetor[vetor.length-1-i];
+        vetor[vetor.length-1-i] = intermediaria;
+    }
+    return vetor;
+}
+
+console.log(inverteVetor(valores));
