@@ -2,9 +2,14 @@ public class No{
     private No esquerda;
     private No direita;
     private int valor;
+    private int fatorBalanceamento;
     
     public No(int valor){
       this.valor = valor;
+    }
+    
+    public int getBalanceamento(){
+      return this.fatorBalanceamento;
     }
 
     public int getValor(){
@@ -25,5 +30,8 @@ public class No{
     }
     public void setEsquerda(No esquerda){
         this.esquerda = esquerda;
+    }
+    public void setBalanceamento(int balanceamento){
+        fatorBalanceamento = balanceamento;
     }
 }
