@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paes"></div>
+    <button onclick="adicionarPao()">Adicionar Pão</button>
+    <button onclick="removerPao()">Remover Pão</button>
+    <p>Quantidade de pães: <span id="num-paes">0</span></p>
+
+    <script>
+        let paes = 0;
+
+        function adicionarPao() {
+            paes++;
+            let paoImg = document.createElement('img');
+            let paoDiv = document.getElementById('paes');
+            paoImg.src = 'pao.jpg';
+            paoImg.style.width = '100px';
+            paoImg.style.height = '100px';
+            paoImg.alt = 'Pão';
+            paoDiv.appendChild(paoImg);
+            document.getElementById('num-paes').innerText = paes;
+        }
+
+        function removerPao() {
+            if (paes > 0) {
+                paes--;
+                document.getElementById('paes').removeChild(document.getElementById('paes').lastChild);
+                document.getElementById('num-paes').innerText = paes;
+            }else{
+                alert('Não há pães para remover');
+            }
+        }
+    </script>
+</body>
+</html>

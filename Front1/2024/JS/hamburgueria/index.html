@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selecione seus lanches</title>
+
+    <style>
+      .burguer-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+
+      .burguer-card img {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+      }
+
+      .burguer-card h2 {
+        margin: 10px 0;
+      }
+
+      .burguer-card p {
+        text-align: justify;
+      }
+
+      .burguer-card button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+
+      .burguer-card button:hover {
+        background-color: #0056b3;
+      }
+
+      .burguer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0px 200px;
+      }
+
+      #cart {
+        display: none;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        width: 300px;
+        border: 1px solid black;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      #cart h2 {
+        text-align: center;
+      }
+
+      #cart ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      #cart li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+
+      #cart p {
+        text-align: right;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="burguer-container">
+      <div class="burguer-card">
+        <img src="imagens/BK-Original.png" alt="BK Original" />
+        <h2>BK Original</h2>
+        <p>
+          Pão com gergelim, carne bovina, queijo, alface, tomate, cebola,
+          picles, ketchup e maionese.
+        </p>
+        <p>R$ 19,90</p>
+        <button onclick="addToCart('BK Original', 19.90)">
+          Adicionar ao carrinho
+        </button>
+      </div>
+
+      <div class="burguer-card">
+        <img src="imagens/Mega-Stacker-3.0.png" alt="Mega Stacker 3.0" />
+        <h2>Mega Stacker 3.0</h2>
+        <p>
+          Pão com gergelim, 4 carnes bovinas, 4 fatias de queijo, bacon, alface,
+          tomate, cebola, picles, maionese e molho Stacker.
+        </p>
+        <p>R$ 29,90</p>
+        <button onclick="addToCart('Mega Stacker 3.0', 29.90)">
+          Adicionar ao carrinho
+        </button>
+      </div>
+
+      <div class="burguer-card">
+        <img
+          src="imagens/whopper-catupiry-interna.png"
+          alt="Whopper Catupiry"
+        />
+        <h2>Whopper Catupiry</h2>
+        <p>
+          Pão com gergelim, carne bovina, queijo, bacon, alface, tomate, cebola,
+          picles, ketchup, maionese e Catupiry.
+        </p>
+        <p>R$ 24,90</p>
+        <button onclick="addToCart('Whopper Catupiry', 24.90)">
+          Adicionar ao carrinho
+        </button>
+      </div>
+
+      <div class="burguer-card">
+        <img src="imagens/Whopper-de-Plantas.png" alt="Whopper Vegetariano" />
+        <h2>Whopper Vegetariano</h2>
+        <p>
+          Pão com gergelim, hambúrguer de plantas, queijo, alface, tomate,
+          cebola, picles, ketchup e maionese.
+        </p>
+        <p>R$ 24,90</p>
+        <button onclick="addToCart('Whopper Vegetariano', 24.90)">
+          Adicionar ao carrinho
+        </button>
+      </div>
+    </div>
+
+    <div id="cart">
+      <h2>Carrinho de Compras</h2>
+      <ul id="cart-items"></ul>
+      <p id="total-price">Total: R$ 0.00</p>
+      <p id="discount">Desconto: R$ 0.00</p>
+      <p id="final-price">Total com desconto: R$ 0.00</p>
+    </div>
+
+    <script>
+      const cartItens = [];
+      const cartPrices = [];
+      const cartElement = document.getElementById("cart");
+      const cartItemsElement = document.getElementById("cart-items");
+      const totalPriceElement = document.getElementById("total-price");
+      const discountElement = document.getElementById("discount");
+      const finalPriceElement = document.getElementById("final-price");
+
+      function addToCart(name, price) {
+        cartItens.push(name);
+        cartPrices.push(price);
+        updateCart();
+      }
+
+      function updateCart() {
+        cartItemsElement.innerHTML = "";
+        let totalPrice = 0;
+        let finalPrice = 0;
+
+        for (let i = 0; i < cartItens.length; i++) {
+          const item = cartItens[i];
+          const itemPrice = cartPrices[i];
+          const li = document.createElement("li");
+          li.textContent = `${item} - R$ ${itemPrice.toFixed(2)}`;
+          cartItemsElement.appendChild(li);
+          totalPrice += itemPrice;
+        }
+
+        finalPrice = totalPrice;
+        if (totalPrice > 100) {
+          finalPrice *= 0.9;
+          discountElement.textContent = `Desconto: R$ ${(
+            totalPrice * 0.1
+          ).toFixed(2)}`;
+            finalPriceElement.textContent = `Total com desconto: R$ ${finalPrice.toFixed(
+                2
+            )}`;
+        }
+
+        totalPriceElement.textContent = `Total: R$ ${totalPrice.toFixed(2)}`;
+
+        cartElement.style.display = cartItens.length > 0 ? "block" : "none";
+      }
+    </script>
+  </body>
+</html>
