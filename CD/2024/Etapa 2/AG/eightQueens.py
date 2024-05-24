@@ -20,21 +20,18 @@ def geneticAlgorithm(population, fitness):
         newPopulation.append(offspring2)
     return newPopulation
 
-def get_individual_fitness(individual):
-    conflicts = 0
-    for i in range(len(individual)):
-        for j in range(i+1, len(individual)):
-            if individual[i] == individual[j]:
-                conflicts = conflicts + 1   
-            offset = j - i
-            if abs(int(individual[i]) - int(individual[j])) == offset:
-                conflicts = conflicts + 1
-    return conflicts
-
-def get_population_fitness(population):
+def getFitness(population):
     fitness = {}
     for individual in population:
-        fitness[individual] = get_individual_fitness(individual)
+        conflicts = 0
+        for i in range(len(individual)):
+            for j in range(i+1, len(individual)):
+                if individual[i] == individual[j]:
+                    conflicts = conflicts + 1   
+                offset = j - i
+                if abs(int(individual[i]) - int(individual[j])) == offset:
+                    conflicts = conflicts + 1
+        fitness[individual] = conflicts
     return fitness
 
 #generate a random population
@@ -47,50 +44,18 @@ def generateRandomPopulation(populationSize):
         population.append(individual)
     return population
 
-
-ind1 = '10433211'
-ind2 = '60013303'
-
-fil1 = '10413303'
-fil2 = '60033211'
-
-fil3 = '10413311'
-fil4 = '60033203'
-
-fil5 = '60033313'
-fil6 = '10413201'
-
-fil7 = '67043251'
-
-print("ind1: ", get_individual_fitness(ind1))
-print("ind2: ", get_individual_fitness(ind2))
-
-print("fil1: ", get_individual_fitness(fil1))
-print("fil2: ", get_individual_fitness(fil2))
-
-print("fil3: ", get_individual_fitness(fil3))
-print("fil4: ", get_individual_fitness(fil4))
-
-print("fil5: ", get_individual_fitness(fil5))
-print("fil6: ", get_individual_fitness(fil6))
-
-print("fil7: ", get_individual_fitness(fil7))
-
-
 #main
-
-# population = generateRandomPopulation(100) # ['12312312','32132132',...]']
-# fitness = getFitness(population)
-# generation = 1
-# while min(fitness.values()) > 0:
-#     print ('Generation ' + str(generation) + ' - Fittest is ' + str(min(fitness.values())))
-#     population = geneticAlgorithm(population, fitness)
-#     fitness = getFitness(population)
-#     generation = generation + 1
-# print ('Solution found in generation ' + str(generation-1))
-# print ('Fitness: ' + str(min(fitness.values())))
-# for individual in fitness.keys():
-#     if fitness[individual] == 0:
-#         print ('Solution: ' + individual)
-#         break
-    
+population = generateRandomPopulation(100) # ['12312312','32132132',...]']
+fitness = getFitness(population)
+generation = 1
+while min(fitness.values()) > 0:
+    print ('Generation ' + str(generation) + ' - Fittest is ' + str(min(fitness.values())))
+    population = geneticAlgorithm(population, fitness)
+    fitness = getFitness(population)
+    generation = generation + 1
+print ('Solution found in generation ' + str(generation-1))
+print ('Fitness: ' + str(min(fitness.values())))
+for individual in fitness.keys():
+    if fitness[individual] == 0:
+        print ('Solution: ' + individual)
+        break

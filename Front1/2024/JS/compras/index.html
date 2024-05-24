@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <ul id="lista-tarefas">
+            <li class="nao-verificada" data-id="1">Estudar HTML</li>
+            <li class="nao-verificada" data-id="2">Estudar CSS</li>
+            <li class="nao-verificada" data-id="3">Estudar JavaScript</li>
+        </ul>
+        <input type="text" id="nova-tarefa" placeholder="Nova tarefa">
+        <div class="buttons">
+            <button id="adicionar-tarefa-btn">Adicionar Tarefa</button>
+            <button id="marcar-todas-btn">Marcar Todas</button>
+            <button id="desmarcar-todas-btn">Desmarcar Todas</button>
+            <button id="excluir-verificadas-btn">Excluir Verificadas</button>
+        </div>
+        <input type="text" id="buscar-tarefa" placeholder="Buscar tarefa">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
