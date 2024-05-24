@@ -1,0 +1,8 @@
+.item_desmarcado{
+    background-color: yellow;
+    color: white;
+}
+
+.item_marcado{
+    background-color: green;
+}

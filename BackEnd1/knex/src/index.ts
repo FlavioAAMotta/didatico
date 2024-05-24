@@ -32,6 +32,24 @@ app.put("/actor/:id", async (req: Request, res: Response) => {
   }
 })
 
+app.post("/user", async(req:Request, res: Response) =>{
+  try{
+    const {nome, email} = req.body;
+    if(!nome || !email){
+      res.status(400).send("Campos inválidos");
+    }
+    const id = uuidV7();
+    const userExists = connection("users").where({email});
+    if(userExists){
+      res.status(400).send("Email já cadastrado");
+    }
+    connection("users").insert({id, nome, email});
+    res.status(201).send("Usuário criado com sucesso!!");
+  }catch(e){
+    res.status(500).send(e.message)
+  }
+})
+
 const server = app.listen(process.env.PORT || 3003, () => {
   if (server) {
     const address = server.address() as AddressInfo;
