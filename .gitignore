@@ -1,3 +1,5 @@
 node_modules
 *.class
 .vscode/settings.json
+Backend1/receitas/.env
+Backend1/arquitetura/.env
