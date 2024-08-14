@@ -50,21 +50,21 @@ public class MergeSort {
   }
 
   public static void main(String[] args) {
-    int[] vetor = new int[2000000];
+    int[] vetor = new int[200000];
     for(int i = 0; i < vetor.length; i++){
       vetor[i] = vetor.length-i; 
     }
-    long inicio = System.currentTimeMillis();
+    long inicio = System.nanoTime();
     mergeSort(vetor);
-    long fim = System.currentTimeMillis();
+    long fim = System.nanoTime();
     System.out.println("Merge: "+ (fim-inicio));
     
     for(int i = 0; i < vetor.length; i++){
       vetor[i] = vetor.length-i; 
     }
-    inicio = System.currentTimeMillis();
+    inicio = System.nanoTime();
     SelectionSort.selectionSort(vetor);
-    fim = System.currentTimeMillis();
+    fim = System.nanoTime();
     System.out.println("Selection: "+ (fim-inicio));
   }
 }

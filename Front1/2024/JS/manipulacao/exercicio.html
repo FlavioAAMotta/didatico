@@ -16,9 +16,22 @@
 
 <body>
     <h1 id="titulo">Título Antes da Mudança</h1>
+    <div>Welcome Div</div>
     <button onclick="mudarAtributos()">Mudar Atributos</button>
+    <button onclick="mudarCorDeFundo()">Mudar de fundo</button>
+    Selecione a cor<input type="color">
+    <button onclick="mudarCorSelecionada()" id="color">Mudar Cor</button>
 
     <script>
+        function mudarCorSelecionada(){
+            let cor = document.getElementById("color");
+            console.log(cor);
+        }
+        function mudarCorDeFundo() {
+            let div = document.querySelector("div");
+            div.style.backgroundColor = 'Green';
+        }
+
         function mudarAtributos() {
             var titulo = document.getElementById('titulo');
             titulo.textContent = 'Título Após a Mudança';

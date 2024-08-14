@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="lista">
+        <h2>Lista de Itens</h2>
+    </div>
+    <button onclick="adicionarItem()">Adicionar Item</button>
+    <button onclick="removerUltimoItem()">Remover Último Item</button>
+    <script>
+        var contador = 0;
+        function adicionarItem() {
+            var novoItem = document.createElement('p');
+            novoItem.textContent = 'Item ' + ++contador;
+            let list = document.getElementById('lista');
+            lista.appendChild(novoItem);
+        }
+        function removerUltimoItem() {
+            var lista = document.getElementById('lista');
+            if (lista.lastChild.nodeName === 'P') {
+                lista.removeChild(lista.lastChild);
+            }
+        }
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,52 @@
+Entrada: Um conjunto de treinamento D={(x1,y1), i=1,...,n}.
+Saída: Árvore de decisão T.
+Procedimento: Construir a árvore de decisão T de forma recursiva.
+Exemplo prático de conjunto de dados em um caso de classificação de espécies de flores Iris.
+Conjunto de treinamento D={(x1,y1), i=1,...,n}:
+x1 = (5.1, 3.5, 1.4, 0.2), y1 = setosa
+x2 = (4.9, 3.0, 1.4, 0.2), y2 = setosa
+x3 = (4.7, 3.2, 1.3, 0.2), y3 = setosa
+
+Algumas características das flores Iris:
+1. Comprimento da sépala (cm)
+2. Largura da sépala (cm)
+3. Comprimento da pétala (cm)
+4. Largura da pétala (cm)
+
+1. Se todos os exemplos em D pertencem à mesma classe y, então retorne um nó folha rotulado com a classe y.
+2. Se a lista de atributos A é vazia, então retorne um nó folha rotulado com a classe y mais comum em D.
+3. Caso contrário, escolha o melhor atributo a* para dividir os exemplos.
+4. Crie um nó de decisão que divide os exemplos em D em subconjuntos de acordo com o valor de a*.
+5. Para cada subconjunto, aplique recursivamente o procedimento 1-4.
+6. Retorne a árvore de decisão T.
+
+O algoritmo ID3 é um algoritmo guloso, ou seja, ele escolhe o melhor atributo para dividir os exemplos em cada nó da árvore de decisão. 
+O critério de seleção do melhor atributo é baseado na entropia dos exemplos. 
+A entropia é uma medida de impureza dos exemplos, ou seja, ela mede o grau de homogeneidade dos exemplos em relação à classe. A entropia é dada pela seguinte fórmula:
+
+H(D) = -Σ p(y) log2 p(y)
+
+Exemplo: Considere um conjunto de treinamento D com 14 exemplos, sendo 9 exemplos da classe 1 e 5 exemplos da classe 2. A entropia dos exemplos é dada por:
+
+H(D) = - (9/14) log2 (9/14) - (5/14) log2 (5/14) = 0.940
+
+O algoritmo ID3 escolhe o atributo que reduz a entropia dos exemplos em relação à classe.
+
+Exemplo de conjunto de dados:
+Tempo       | Temperatura   | Umidade   | Vento | Joga
+Chuvoso     | 71            | 91        | Sim   | Não
+Ensolarado  | 69            | 70        | Não   | Sim
+Ensolarado  | 80            | 90        | Sim   | Não
+Nublado     | 83            | 86        | Não   | Sim
+Chuvoso     | 70            | 96        | Não   | Sim
+Chuvoso     | 65            | 70        | Sim   | Não
+Nublado     | 64            | 65        | Sim   | Sim
+Nublado     | 72            | 90        | Sim   | Sim
+Ensolarado  | 75            | 70        | Sim   | Sim
+Chuvoso     | 68            | 80        | Não   | Sim
+Nublado     | 81            | 75        | Não   | Sim
+Ensolarado  | 85            | 85        | Não   | Não
+Ensolarado  | 72            | 95        | Não   | Não
+Chuvoso     | 75            | 80        | Não   | Sim
+
+O objetivo é construir uma árvore de decisão para prever se o time de tênis vai jogar ou não.
