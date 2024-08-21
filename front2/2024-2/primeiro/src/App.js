@@ -1,22 +1,13 @@
-import { CardVideo } from './CardVideo';
-import { MenuItem } from './MenuItem';
+import './App.css';
+import { PrimeiroComp } from './PrimeiroComp';
 
 function App() {
-  return (
-    <div>
-      <CardVideo />
-      <CardVideo />
-      <CardVideo />
-
-      <MenuItem texto={'Menu'} />
-      <MenuItem texto={'Opções'}/>
-      <MenuItem texto={'Em alta'}/>
-      <MenuItem texto={'Inscrições'}/>
-      <MenuItem texto={'Originais'}/>
-      <MenuItem texto={'Histórico'}/>
-      
-    </div>
-  );
+  return(
+    <>
+      <h1>Texto do componente app</h1>
+      <PrimeiroComp/>
+    </>
+  )  
 }
 
 export default App;
