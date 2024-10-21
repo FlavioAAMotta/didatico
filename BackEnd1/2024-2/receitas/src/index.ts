@@ -12,9 +12,30 @@ app.use(cors());
 
 app.get('/recipes', async (req: Request, res: Response)=>{
   try{
-    const title = req.query.title;
+    const title = req.query.title || '%';
+    const limit = req.query.limit || 3;
+    const order = req.query.order as string || "ASC";
+    const offset = req.query.offset || 0;
+    const sort = req.query.sort as string || 'title';
+
+    if(order != "ASC" && order !="DESC"){
+      res.status(402).send("Deve ser decrescente ou crescente")
+    }
+
+    if(Number(title.length) < 3 && title!='%'){
+      res.status(411).send("Por favor digite um título com mais de 3 caracteres")
+    }
+
+    if(isNaN(Number(limit))){
+      res.status(422).send("Por favor digite um numero para limit")
+    }
+
     const receitas = await connection('recipes')
-      .where({title})
+      .where('title', 'like', `%${title}%`)
+      .limit(Number(limit))
+      .orderBy(sort, order)
+      .offset(Number(offset))
+
     res.send(receitas);
   }catch(error:any){
     res.send(error.sqlMessage || error.message);
