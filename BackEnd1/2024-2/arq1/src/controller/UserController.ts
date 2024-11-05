@@ -1,6 +1,6 @@
 // Onde vou colocar comunicação
 import { Request, Response } from 'express'
-import { UserBusiness } from '../business/userBusiness';
+import { UserBusiness } from '../business/UserBusiness';
 
 
 export class UserController {
