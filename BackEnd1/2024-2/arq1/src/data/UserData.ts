@@ -13,18 +13,12 @@ export class UserData {
         }
     }
 
-    cadastrarUsuario = async (id: string, email: string, password: string, name: string, nickname: string, role: string) =>{
+    cadastrarUsuario = async (newUser: user) => {
         try {
-            await connection('to_do_list_users').insert({
-                id,
-                email,
-                password,
-                name,
-                nickname,
-                role
-            })
+
+            await connection('to_do_list_users').insert(newUser)
         } catch (error: any) {
             throw new Error(error.sqlMessage || error.message);
         }
-    }
+    }  
 }

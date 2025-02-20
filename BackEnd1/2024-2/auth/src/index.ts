@@ -6,8 +6,10 @@ import { AddressInfo } from "net";
 import { connection } from "./connection";
 import { generateId } from "./middlewares/idGenerator";
 import { user, userRole } from "./types/user";
-import { generateToken, payload } from "./middlewares/authenticator";
+import { generateToken, payload, verifyToken } from "./middlewares/authenticator";
 import { compare, hash } from "./middlewares/hashManager";
+import { decode } from "jsonwebtoken";
+import { verify } from "crypto";
 
 const app = express();
 
@@ -79,6 +81,59 @@ app.post('/login', async (req: Request, res: Response) => {
     const token = await generateToken(payload)
 
     res.send(token)
+  } catch (error: any) {
+    res.send(error.sqlMessage || error.message);
+  }
+})
+
+app.get('/items', async (req: Request, res: Response) => {
+  try {
+    const token = req.headers.authorization as string;
+
+    const auth = verifyToken(token);
+
+    if(!auth){
+      res.status(401);
+      throw new Error("Não autorizado");
+    }
+
+    const items = await connection('to_do_list_tasks')
+
+    res.send(items)
+  } catch (error: any) {
+    res.send(error.sqlMessage || error.message);
+  }
+})
+
+app.post('/items', async (req: Request, res: Response) => {
+  try {
+    const token = req.headers.authorization as string;
+    const { title, description, limitDate, creatorUserId } = req.body;
+    const auth = verifyToken(token);
+
+    if(!auth){
+      res.status(401);
+      throw new Error("Não autorizado");
+    }
+
+    if (!title || !description || !limitDate || !creatorUserId) {
+      res.status(422);
+      throw new Error("Favor enviar todos campos");
+    }
+
+    const newId = generateId();
+
+    const newItem = {
+      id: newId,
+      title,
+      description,
+      limit_date: limitDate,
+      creator_user_id: creatorUserId
+    }
+
+    await connection('to_do_list_tasks').insert(newItem)
+
+    res.send(newId)
   } catch (error: any) {
     res.send(error.sqlMessage || error.message);
   }
