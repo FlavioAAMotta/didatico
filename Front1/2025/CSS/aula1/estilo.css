@@ -1,0 +1,18 @@
+/* h1{
+    color: green;
+    border: 1px dotted black;
+}
+
+div{
+    border: 1px solid blue;
+    background-color: yellow;
+} */
+
+.texto-primario {
+    color: #55ffaa;
+    border: 1px dotted black;
+}
+
+.fundo-preto{
+    background-color: black;
+}
