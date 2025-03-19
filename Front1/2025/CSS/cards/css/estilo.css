@@ -1,0 +1,37 @@
+.profile-card{
+    width: 250px;
+    margin: 2em auto;
+    border: 2px solid #ccc;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.icon{
+    width: 30px;
+    border-radius: 50%;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.profile-card > img{
+    width: 250px;
+    border-radius: 50%;
+}
+
+.container{
+    border: 2px solid black;
+    width: 40vw;
+    height: 500px;
+}
+
+.conteudo{
+    border: 2px dotted red;
+    width: 30%;
+    height: 300px;
+    margin: 30px;
+}
