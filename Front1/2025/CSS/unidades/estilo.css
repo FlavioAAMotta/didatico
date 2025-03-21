@@ -1,0 +1,12 @@
+.caixa{
+    width: 60vw;
+    height: 600px;
+    border: 2px solid black;
+}
+
+.caixa-dentro{
+    width: 30%;
+    height: 30%;
+    margin: 10px;
+    background-color: green;
+}

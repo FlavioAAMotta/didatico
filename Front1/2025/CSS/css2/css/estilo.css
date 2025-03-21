@@ -1,0 +1,56 @@
+.container{
+    border: 2px solid black;
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.container-dentro{
+    background-color: red;
+    position: relative;
+    top: 10px;
+    width: 200px;
+    height: 200px;
+
+}
+
+/* *{
+    margin: 0px;
+    padding: 0px;
+}
+
+div.container p.destaque {
+    color: red;
+    background-color: yellow;
+    padding: 5px;
+}
+
+h1, h2 {
+    color: darkblue;
+    text-align: center;
+}
+
+.container p {
+    color: green;
+    font-style: italic;
+}
+.container > p {
+    font-weight: bold;
+}
+
+input:active{
+    background-color: yellow;
+}
+
+.button{
+    display: inline;
+    border: 1px solid darkcyan;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.button:hover{
+    background-color: darkcyan;
+    color: white;
+    cursor: pointer;
+} */

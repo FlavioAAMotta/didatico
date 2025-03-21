@@ -1,0 +1,151 @@
+timestamp,eletrodomestico,consumo_kwh,dia_semana,hora
+2024-03-01 11:15:00,Microondas,0.82,Friday,11
+2024-03-01 15:30:00,Cafeteira,0.71,Friday,15
+2024-03-02 11:45:00,Air Fryer,1.49,Saturday,11
+2024-03-02 07:15:00,Microondas,1.13,Saturday,7
+2024-03-01 17:15:00,Microondas,0.81,Friday,17
+2024-03-02 13:15:00,Microondas,0.97,Saturday,13
+2024-03-01 23:30:00,Cafeteira,0.63,Friday,23
+2024-03-02 07:45:00,Air Fryer,1.13,Saturday,7
+2024-03-01 10:15:00,Microondas,1.31,Friday,10
+2024-03-02 06:15:00,Microondas,1.3,Saturday,6
+2024-03-02 06:30:00,Cafeteira,0.81,Saturday,6
+2024-03-02 01:15:00,Microondas,1.07,Saturday,1
+2024-03-02 18:00:00,Geladeira,0.21,Saturday,18
+2024-03-02 13:30:00,Cafeteira,0.97,Saturday,13
+2024-03-02 13:45:00,Air Fryer,1.69,Saturday,13
+2024-03-01 17:00:00,Geladeira,0.26,Friday,17
+2024-03-02 02:45:00,Air Fryer,1.71,Saturday,2
+2024-03-02 20:15:00,Microondas,1.36,Saturday,20
+2024-03-02 12:45:00,Air Fryer,1.58,Saturday,12
+2024-03-02 19:15:00,Microondas,1.46,Saturday,19
+2024-03-02 08:15:00,Microondas,1.25,Saturday,8
+2024-03-02 17:00:00,Geladeira,0.2,Saturday,17
+2024-03-01 12:45:00,Air Fryer,1.15,Friday,12
+2024-03-01 23:45:00,Air Fryer,1.2,Friday,23
+2024-03-02 05:30:00,Cafeteira,0.94,Saturday,5
+2024-03-02 09:00:00,Geladeira,0.05,Saturday,9
+2024-03-02 03:45:00,Air Fryer,1.0,Saturday,3
+2024-03-02 04:30:00,Cafeteira,1.02,Saturday,4
+2024-03-01 21:45:00,Air Fryer,1.73,Friday,21
+2024-03-01 14:30:00,Cafeteira,3.5,Friday,14
+2024-03-01 18:30:00,Cafeteira,0.78,Friday,18
+2024-03-01 10:30:00,Cafeteira,0.73,Friday,10
+2024-03-02 02:00:00,Geladeira,0.25,Saturday,2
+2024-03-02 15:45:00,Air Fryer,1.36,Saturday,15
+2024-03-01 21:00:00,Geladeira,0.22,Friday,21
+2024-03-01 08:15:00,Microondas,1.17,Friday,8
+2024-03-02 01:00:00,Geladeira,0.27,Saturday,1
+2024-03-02 15:00:00,Geladeira,0.28,Saturday,15
+2024-03-02 06:45:00,Air Fryer,1.74,Saturday,6
+2024-03-01 21:15:00,Microondas,1.32,Friday,21
+2024-03-02 14:00:00,Geladeira,0.29,Saturday,14
+2024-03-01 09:15:00,Microondas,1.15,Friday,9
+2024-03-01 13:30:00,Cafeteira,0.81,Friday,13
+2024-03-02 00:15:00,Microondas,1.47,Saturday,0
+2024-03-01 13:15:00,Microondas,1.15,Friday,13
+2024-03-02 04:00:00,Geladeira,0.24,Saturday,4
+2024-03-01 20:45:00,Air Fryer,1.4,Friday,20
+2024-03-02 12:30:00,Cafeteira,0.77,Saturday,12
+2024-03-02 14:30:00,Cafeteira,1.01,Saturday,14
+2024-03-02 20:30:00,Cafeteira,0.61,Saturday,20
+2024-03-02 16:45:00,Air Fryer,1.52,Saturday,16
+2024-03-01 19:30:00,Cafeteira,0.73,Friday,19
+2024-03-02 04:45:00,Air Fryer,1.37,Saturday,4
+2024-03-02 13:00:00,Geladeira,0.25,Saturday,13
+2024-03-02 19:00:00,Geladeira,0.26,Saturday,19
+2024-03-02 10:30:00,Cafeteira,1.08,Saturday,10
+2024-03-02 06:00:00,Geladeira,0.22,Saturday,6
+2024-03-02 19:30:00,Cafeteira,0.56,Saturday,19
+2024-03-02 07:00:00,Geladeira,0.21,Saturday,7
+2024-03-02 08:30:00,Cafeteira,0.8,Saturday,8
+2024-03-01 18:00:00,Geladeira,0.29,Friday,18
+2024-03-01 19:00:00,Geladeira,0.18,Friday,19
+2024-03-02 03:30:00,Cafeteira,0.81,Saturday,3
+2024-03-02 20:00:00,Geladeira,0.26,Saturday,20
+2024-03-02 10:15:00,Microondas,1.28,Saturday,10
+2024-03-02 09:15:00,Microondas,0.1,Saturday,9
+2024-03-01 22:15:00,Microondas,1.14,Friday,22
+2024-03-02 10:00:00,Geladeira,0.24,Saturday,10
+2024-03-01 20:00:00,Geladeira,0.27,Friday,20
+2024-03-02 00:30:00,Cafeteira,0.79,Saturday,0
+2024-03-01 10:00:00,Geladeira,0.23,Friday,10
+2024-03-01 14:45:00,Air Fryer,1.59,Friday,14
+2024-03-02 04:15:00,Microondas,1.27,Saturday,4
+2024-03-02 03:15:00,Microondas,1.14,Saturday,3
+2024-03-01 19:15:00,Microondas,1.06,Friday,19
+2024-03-01 17:45:00,Air Fryer,1.55,Friday,17
+2024-03-02 07:30:00,Cafeteira,0.74,Saturday,7
+2024-03-02 03:00:00,Geladeira,0.25,Saturday,3
+2024-03-01 20:15:00,Microondas,0.85,Friday,20
+2024-03-02 10:45:00,Air Fryer,1.54,Saturday,10
+2024-03-02 17:30:00,Cafeteira,0.66,Saturday,17
+2024-03-02 12:15:00,Microondas,1.69,Saturday,12
+2024-03-02 16:30:00,Cafeteira,0.57,Saturday,16
+2024-03-01 22:00:00,Geladeira,0.21,Friday,22
+2024-03-02 16:00:00,Geladeira,0.25,Saturday,16
+2024-03-02 14:45:00,Air Fryer,1.15,Saturday,14
+2024-03-01 11:45:00,Air Fryer,1.36,Friday,11
+2024-03-02 14:15:00,Microondas,1.02,Saturday,14
+2024-03-02 18:30:00,Cafeteira,0.92,Saturday,18
+2024-03-02 01:45:00,Air Fryer,1.88,Saturday,1
+2024-03-01 12:00:00,Geladeira,0.2,Friday,12
+2024-03-01 22:30:00,Cafeteira,0.85,Friday,22
+2024-03-02 11:30:00,Cafeteira,0.51,Saturday,11
+2024-03-01 16:30:00,Cafeteira,0.92,Friday,16
+2024-03-01 08:30:00,Cafeteira,0.9,Friday,8
+2024-03-02 01:30:00,Cafeteira,0.85,Saturday,1
+2024-03-02 17:45:00,Air Fryer,1.89,Saturday,17
+2024-03-01 14:15:00,Microondas,1.8,Friday,14
+2024-03-01 12:30:00,Cafeteira,0.66,Friday,12
+2024-03-01 20:30:00,Cafeteira,0.85,Friday,20
+2024-03-02 00:45:00,Air Fryer,1.75,Saturday,0
+2024-03-01 09:30:00,Cafeteira,1.04,Friday,9
+2024-03-01 15:45:00,Air Fryer,1.96,Friday,15
+2024-03-02 08:00:00,Geladeira,0.26,Saturday,8
+2024-03-01 14:00:00,Geladeira,0.22,Friday,14
+2024-03-02 05:00:00,Geladeira,0.21,Saturday,5
+2024-03-02 16:15:00,Microondas,1.1,Saturday,16
+2024-03-02 09:30:00,Cafeteira,0.75,Saturday,9
+2024-03-02 08:45:00,Air Fryer,1.44,Saturday,8
+2024-03-01 11:00:00,Geladeira,0.26,Friday,11
+2024-03-01 12:15:00,Microondas,1.26,Friday,12
+2024-03-01 18:45:00,Air Fryer,1.42,Friday,18
+2024-03-02 20:45:00,Air Fryer,1.17,Saturday,20
+2024-03-01 17:30:00,Cafeteira,0.6,Friday,17
+2024-03-01 09:45:00,Air Fryer,1.69,Friday,9
+2024-03-01 22:45:00,Air Fryer,1.74,Friday,22
+2024-03-01 13:45:00,Air Fryer,1.14,Friday,13
+2024-03-02 12:00:00,Geladeira,0.25,Saturday,12
+2024-03-02 00:00:00,Geladeira,0.29,Saturday,0
+2024-03-01 09:00:00,Geladeira,0.24,Friday,9
+2024-03-01 18:15:00,Microondas,1.23,Friday,18
+2024-03-01 16:00:00,Geladeira,0.25,Friday,16
+2024-03-01 13:00:00,Geladeira,0.32,Friday,13
+2024-03-02 09:45:00,Air Fryer,1.3,Saturday,9
+2024-03-01 15:00:00,Geladeira,0.22,Friday,15
+2024-03-02 19:45:00,Air Fryer,1.55,Saturday,19
+2024-03-01 08:45:00,Air Fryer,1.88,Friday,8
+2024-03-01 23:15:00,Microondas,1.16,Friday,23
+2024-03-02 15:15:00,Microondas,1.64,Saturday,15
+2024-03-01 21:30:00,Cafeteira,0.95,Friday,21
+2024-03-02 11:15:00,Microondas,1.19,Saturday,11
+2024-03-02 15:30:00,Cafeteira,0.65,Saturday,15
+2024-03-01 19:45:00,Air Fryer,1.76,Friday,19
+2024-03-02 17:15:00,Microondas,1.29,Saturday,17
+2024-03-02 02:30:00,Cafeteira,0.41,Saturday,2
+2024-03-01 11:30:00,Cafeteira,0.54,Friday,11
+2024-03-02 11:00:00,Geladeira,0.26,Saturday,11
+2024-03-01 10:45:00,Air Fryer,1.38,Friday,10
+2024-03-02 18:15:00,Microondas,1.14,Saturday,18
+2024-03-01 15:15:00,Microondas,1.14,Friday,15
+2024-03-01 16:45:00,Air Fryer,1.19,Friday,16
+2024-03-01 08:00:00,Geladeira,0.27,Friday,8
+2024-03-01 23:00:00,Geladeira,0.23,Friday,23
+2024-03-02 02:15:00,Microondas,1.51,Saturday,2
+2024-03-01 16:15:00,Microondas,0.99,Friday,16
+2024-03-02 21:15:00,Microondas,1.26,Saturday,21
+2024-03-02 21:00:00,Geladeira,0.28,Saturday,21
+2024-03-02 05:45:00,Air Fryer,1.58,Saturday,5
+2024-03-02 05:15:00,Microondas,1.1,Saturday,5
+2024-03-02 18:45:00,Air Fryer,1.19,Saturday,18

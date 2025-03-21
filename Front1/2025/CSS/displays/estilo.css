@@ -1,0 +1,16 @@
+.verde {
+    display: inline;
+    background-color: green;
+}
+
+.vermelho {
+    display: inline;
+    background-color: red;
+}
+
+.marrom {
+    display: inline;
+    margin-left: 10px;
+    border: maroon 1px solid;
+    padding: 0px 5px 20px 10px;
+}
