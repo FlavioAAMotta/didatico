@@ -1,16 +1,36 @@
+body{
+    height: 1500px;
+}
+
 .verde {
-    display: inline;
+    width: 100px;
+    height: 100px;
     background-color: green;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
 }
 
 .vermelho {
-    display: inline;
+    width: 400px;
+    height: 400px;
     background-color: red;
+    position: relative;
+}
+
+.icone{
+    background-color: purple;
+    width: 50px;
+    height: 50px;
+    position: sticky;
+    border-radius: 10px;
+    top: 0px;
 }
 
 .marrom {
-    display: inline;
-    margin-left: 10px;
-    border: maroon 1px solid;
-    padding: 0px 5px 20px 10px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 0px;
+    background-color: maroon;
 }
