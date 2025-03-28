@@ -1,0 +1,11 @@
+div{
+    background-color: yellow;
+}
+
+.texto-nao-importante{
+    color: blue;
+}
+
+.texto-importante{
+    color: maroon;
+}
