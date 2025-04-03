@@ -1,57 +1,48 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Pagina de exemplo</title>
+    </head>
+    <body>
+        <h1>Página de exemplo da aula</h1>
+        <p>Aqui vamos aprender algumas tags e seus significados</p>
 
-<head>
-    <title>Aula HTML</title>
-    <meta charset="UTF-8">
-</head>
+        <table border="1">
+            <tr>
+                <th>Tag</th>
+                <th>Significado</th>
+            </tr>
+            <tr>
+                <td>h1</td>
+                <td>Cabeçalho maior</td>
+            </tr>
+            <tr>
+                <td>table</td>
+                <td>cria uma tabela</td>
+            </tr>
+            <tr>
+                <td>tr</td>
+                <td>Nova linha de tabela</td>
+            </tr>
+        </table>
 
-<body>
-
-    <form>
-        
-    </form>
-
-    <table border="1">
-        <tr>
-            <th>Nome</th>
-            <th>Preço</th>
-            <th>Categoria</th>
-            <th>Categoria 2</th>
-        </tr>
-        <tr>
-            <td>Mouse</td>
-            <td>20R$</td>
-            <td rowspan="2" colspan="2">Eletronico</td>
-        </tr>
-        <tr>
-            <td>Teclado</td>
-            <td>30R$</td>
-        </tr>
-    </table>
-    <!-- Como utilizar colspan e rowspan -->
-    <h1>Lista de compras</h1>
-    <ul>
-        <li>Pão</li>
-        <li>Queijo</li>
-        <ul>
-            <li>Parmesão</li>
-            <li>Muçarela</li>
-        </ul>
-        <li>Carne</li>
+        <h2>Como aprender listas? </h2>
         <ol>
-            <li>Acem</li>
-            <li>Patinho</li>
+            <li>Aprender diferentes tipos de listas</li>
+            <ul>
+                <li>Listas Ordenadas</li>
+                <li>Listas Não Ordenadas</li>
+            </ul>
+            <li>Praticar com código</li>
         </ol>
-    </ul>
-    <h2>Título 2</h2>
-    <h3>Título 3</h3>
-    <h4>Título 4</h4>
-    <p>Começando com HTML</p>
-    <a href="http://www.google.com">
-        <img src="img/R.jpg" alt="Imagem de um pato" style="width: 200px; height: 200px;">
-    </a>
-
-</body>
-
+        <h2>Quer aprender mais?</h2>
+        <form>
+            <input type="text" placeholder="Nome completo"><br>
+            <input type="email" placeholder="Digite seu email"><br>
+            Você já sabe HTML? <br>
+            Sim <input type="radio" name="sabe">
+            Não<input type="radio" name="sabe"> <br>
+            Gosta de tecnologia? <input type="checkbox">
+        </form>
+    </body>
 </html>
