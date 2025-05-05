@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lojinha Simples</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      height: 100vh;
+    }
+
+    .sidebar {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    .main {
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .produto {
+      background-color: white;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .produto img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .produto button {
+      margin-top: auto;
+      padding: 8px 12px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .produto button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li>Início</li>
+        <li>Produtos</li>
+        <li>Contato</li>
+        <li>Sobre</li>
+      </ul>
+    </aside>
+    <main class="main">
+      <h1>Produtos em destaque</h1>
+      <div class="produtos">
+        <div class="produto">
+          <img src="https://picsum.photos/200/300" alt="Produto 1">
+          <p>Produto 1</p>
+          <button>Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://picsum.photos/200/300" alt="Produto 2">
+          <p>Produto 2</p>
+          <button>Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://picsum.photos/200/300" alt="Produto 3">
+          <p>Produto 3</p>
+          <button>Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://picsum.photos/200/300" alt="Produto 4">
+          <p>Produto 4</p>
+          <button>Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://picsum.photos/200/300" alt="Produto 4">
+          <p>Produto 5</p>
+          <button>Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://picsum.photos/200/300" alt="Produto 4">
+          <p>Produto 6</p>
+          <button>Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://picsum.photos/200/300" alt="Produto 4">
+          <p>Produto 7</p>
+          <button>Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://picsum.photos/200/300" alt="Produto 4">
+          <p>Produto 8</p>
+          <button>Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://picsum.photos/200/300" alt="Produto 4">
+          <p>Produto 9</p>
+          <button>Comprar</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
