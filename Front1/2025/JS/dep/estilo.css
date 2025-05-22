@@ -1,0 +1,19 @@
+.botao{
+    background-color: green;
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.texto-verde{
+    color: green;
+}
+
+.texto-grande{
+    font-size: 50px;
+}
+
+.texto-italico{
+    font-style: italic;
+}
