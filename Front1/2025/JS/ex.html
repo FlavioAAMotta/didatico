@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #quadro{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        .dado-novo{
+            color: white;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        Nome: <input type="text"><br>
+        Idade: <input type="number" id="idade"><br>
+        <input type="button" value="Add" onclick="addItem()">
+    </form>
+    <div id="quadro"></div>
+
+    <script>
+        function addItem(){
+            let div = document.querySelector("div");
+            let inputNome = document.querySelector("input");
+            let inputIdade = document.getElementById("idade");
+            let textoNome = inputNome.value;
+            let textoIdade = inputIdade.value;
+
+            let divNova = document.createElement('div');
+            let pNome = document.createElement('p');
+            let pIdade = document.createElement('p');
+
+            pNome.textContent = textoNome;
+            pIdade.textContent = textoIdade;
+
+            divNova.appendChild(pNome);
+            divNova.appendChild(pIdade);
+            divNova.setAttribute("class", "dado-novo")
+
+            div.appendChild(divNova);
+
+            inputNome.value = "";
+            inputIdade.value = "";
+        }
+    </script>
+</body>
+</html>
