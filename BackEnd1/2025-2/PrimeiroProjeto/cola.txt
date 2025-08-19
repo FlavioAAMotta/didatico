@@ -1,0 +1,500 @@
+   11  echo $nome
+   12  touch script.sh
+   13  code .
+   14  bash script.sh 
+   15  bash script.sh 
+   16  bash script.sh 
+   17  bash script.sh 
+   18  bash script.sh 
+   19  bash script.sh 
+   20  bash script.sh 
+   21  bash script.sh ]
+   22  bash script.sh ]
+   23  bash script.sh
+   24  bash script.sh
+   25  pwd
+   26  pwd
+   27  bash script.sh
+   28  ls
+   29  cat createLog.sh 
+   30  bash createLog.sh 
+   31  clear
+   32  npm i
+   33  npm install express
+   34  npm install express
+   35  npm i
+   36  npm i
+   37  npm i express
+   38  npm i @types/express
+   39  npm i @types/cors
+   40  npm i @types/dotenv
+   41  clear
+   42  npm run dev
+   43  cd API/
+   44  ls
+   45  npm i
+   46  npm run dev
+   47  clear
+   48  clear
+   49  ls
+   50  cd ../Trabalho/
+   51  ls
+   52  npm init -y
+   53  ls
+   54  npm i typescript -D
+   55  npx tsc --init
+   56  npm i -d ts-node-dev
+   57  mkdir src
+   58  touch src/index.ts
+   59  npm run start
+   60  npm run dev
+   61  npm run dev
+   62  npm run ex1
+   63  npm run ex1
+   64  cd ../API/
+   65  ls
+   66  npm run dev
+   67  code .
+   68  ssh -i "app-web.pem" ubuntu@ec2-3-213-150-233.compute-1.amazonaws.com
+   69  ssh -i app-web.pem ubuntu@ec2-3-213-150-233.compute-1.amazonaws.com
+   70  cp app-web.pem /usr/
+   71  pwd
+   72  pwd
+   73  ls
+   74  ls
+   75  ssh -i ./app-web.pem ubuntu@ec2-3-213-150-233.compute-1.amazonaws.com
+   76  ls
+   77  git flow init
+   78  git flow feature start InserirLista
+   79  git flow feature publish InserirLista]
+   80  git flow feature publish InserirLista
+   81  npm i
+   82  ssh -i "app-web.pem" ubuntu@ec2-3-213-150-233.compute-1.amazonaws.com
+   83  ssh -i app-web.pem ubuntu@ec2-3-213-150-233.compute-1.amazonaws.com
+   84  ssh -i app-web.pem ubuntu@ec2-3-213-150-233.compute-1.amazonaws.com
+   85  ssh -i "app-web.pem" ubuntu@ec2-3-213-150-233.compute-1.amazonaws.com
+   86  ssh -i app-web.pem ubuntu@ec2-3-213-150-233.compute-1.amazonaws.com
+   87  git add .
+   88  git push
+   89  git commit -m "Primeiro POO"
+   90  git pull
+   91  git push
+   92  git commit -m "gitignore"
+   93  git add .
+   94  git commit -m "gitignore"
+   95  git push
+   96  git add .
+   97  git commit -m "Lista simplesmente encadeada"
+   98  git push
+   99  code .
+  100  ls
+  101  ls
+  102  git add .
+  103  git commit -m "Listas Duplamente"
+  104  git push
+  105  git add .
+  106  git commit -m "att 17/03/23"
+  107  git pull
+  108  git push
+  109  git add .
+  110  git commit -m "20/03/23"
+  111  git push
+  112  cd Extras/
+  113  ls
+  114  python sorteioAlunos.py 
+  115  cat sorteador.py 
+  116  cd Extras/
+  117  python sorteioAlunos.py 
+  118  code .
+  119  cd Grupo6/
+  120  ls
+  121  cd JogoDaVida/pedraoMaycaoVictao/
+  122  ls
+  123  cd trabalhoFinal/
+  124  ls
+  125  javac Main.java 
+  126  java Main.java 
+  127  git clone https://github.com/Guedes663/Trabalho-ED.git
+  128  cd ../
+  129  cd Grupo6/
+  130  git clone https://github.com/Pedro0974/JogoDaVida.git
+  131  cd ../Grupo7/
+  132  git clone https://github.com/GuilhermeRiguitti/Trabalho-Jogo-da-Vida.git
+  133  cd ../Grupo8/
+  134  git clone https://github.com/Victordplima/Jogo-da-Vida.git
+  135  git push
+  136  git add .
+  137  git commit -m "2903"
+  138  git push
+  139  git pull
+  140  jupyter notebook
+  141  code .
+  142  code[; 
+  143  code
+  144  .
+  145  ssh flaviomotta@10.32.4.10
+  146  ls
+  147  npx create-react-app Projeto
+  148  npx create-react-app projeto-um
+  149  cd projeto-um/
+  150  npm start
+  151  npm run build
+  152  npm i -g surge
+  153  surge ./build
+  154  clear
+  155  clear
+  156  clear
+  157  surge ./build
+  158  code .
+  159  code .
+  160  code .
+  161  cd ../
+  162  ls
+  163  cd ../
+  164  code .
+  165  code .
+  166  code .
+  167  code .
+  168  code .
+  169  cd Documents/
+  170  ls
+  171  cd Codigos/
+  172  ls
+  173  clear
+  174  git clone https://github.com/FlavioAAMotta/TodoList2024.git
+  175  ls
+  176  pwd
+  177  code .
+  178  cd ../
+  179  code .
+  180  python dt.py 
+  181  python dt.py 
+  182  python dt.py 
+  183  code .
+  184  code .
+  185  python -v
+  186  python --v
+  187  python -version
+  188  python --version
+  189  ls
+  190  pwd
+  191  clear
+  192  cd ..
+  193  ls
+  194  cd BackEnd1/
+  195  ls
+  196  mkdir primeiroProjeto
+  197  cd primeiroProjeto/
+  198  clear
+  199  ls
+  200  npm init
+  201  ls
+  202  npm run test
+  203  git -v
+  204  git --v
+  205  git --version
+  206  clear
+  207  git --version
+  208  ls
+  209  pwd
+  210  cd didatico/
+  211  ls
+  212  cd BackEnd1
+  213  ls
+  214  clear
+  215  ls
+  216  mkdir primeiro
+  217  cd primeiro
+  218  ls
+  219  clear
+  220  npm init
+  221  cd 
+  222  cd Documents/Codigos/
+  223  ls
+  224  mkdir projTeste
+  225  cd projTeste/
+  226  lpwd]
+  227  pwd
+  228  git clone https://github.com/FlavioAAMotta/front1.git
+  229  ls
+  230  cd front1/
+  231  ls
+  232  cat readme.md 
+  233  pwd
+  234  code .
+  235  git add readme.md 
+  236  git add .
+  237  git commit -m "Começando o projeto"
+  238  git push
+  239  code .
+  240  code .
+  241  #!/bin/bash
+  242  # Step 1: Create a new directory for the project and navigate into it
+  243  mkdir experiencia-paciente-fcv && cd experiencia-paciente-fcv
+  244  # Step 2: Initialize a new React project using Vite
+  245  npm create vite@latest . -- --template react
+  246  # Step 3: Install necessary dependencies
+  247  npm install
+  248  # Step 4: Install styled-components for styling
+  249  npm install styled-components
+  250  # Step 5: Install react-router-dom for routing
+  251  npm install react-router-dom
+  252  # Step 6: Install eslint and prettier for code linting and formatting
+  253  npm install -D eslint prettier eslint-plugin-react eslint-config-prettier eslint-plugin-prettier
+  254  # Step 7: Create initial folder structure for components and pages
+  255  mkdir -p src/components src/pages
+  256  # Step 8: Move existing components into appropriate files
+  257  mv Login.js src/pages/Login.js
+  258  mv Home.js src/pages/Home.js
+  259  # Step 9: Create routing setup in App.js
+  260  cat > src/App.js <<EOL
+  261  import React from 'react';
+  262  import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+  263  import Home from './pages/Home';
+  264  import Login from './pages/Login';
+  265  import PatientJourney from './pages/PatientJourney';
+  266  import Questionnaires from './pages/Questionnaires';
+  267  const App = () => {
+  268    return (
+  269      <Router>
+  270        <Routes>
+  271          <Route path="/" element={<Home />} />
+  272          <Route path="/login" element={<Login />} />
+  273          <Route path="/patient-journey" element={<PatientJourney />} />
+  274          <Route path="/questionnaires" element={<Questionnaires />} />
+  275        </Routes>
+  276      </Router>
+  277    );
+  278  };
+  279  export default App;
+  280  EOL
+  281  # Step 10: Create placeholder components for other pages
+  282  cat > src/pages/PatientJourney.js <<EOL
+  283  import React from 'react';
+  284  const PatientJourney = () => {
+  285    return (
+  286      <div>
+  287        <h2>Jornada do Paciente</h2>
+  288        <p>Informações sobre a jornada do paciente serão exibidas aqui.</p>
+  289      </div>
+  290    );
+  291  };
+  292  export default PatientJourney;
+  293  EOL
+  294  cat > src/pages/Questionnaires.js <<EOL
+  295  import React from 'react';
+  296  const Questionnaires = () => {
+  297    return (
+  298      <div>
+  299        <h2>Questionários</h2>
+  300        <p>Preencha os questionários relacionados ao seu tratamento.</p>
+  301      </div>
+  302    );
+  303  };
+  304  export default Questionnaires;
+  305  EOL
+  306  # Step 11: Add Prettier and ESLint configuration
+  307  cat > .eslintrc.json <<EOL
+  308  {
+  309    "extends": [
+  310      "react-app",
+  311      "eslint:recommended",
+  312      "plugin:react/recommended",
+  313      "plugin:prettier/recommended"
+  314    ],
+  315    "rules": {
+  316      "prettier/prettier": ["error", { "endOfLine": "auto" }]
+  317    }
+  318  }
+  319  EOL
+  320  cat > .prettierrc <<EOL
+  321  {
+  322    "semi": true,
+  323    "singleQuote": true,
+  324    "tabWidth": 2
+  325  }
+  326  EOL
+  327  # Step 12: Start the development server
+  328  npm run dev
+  329  npx create-react-app .
+  330  # Step 3: Install necessary dependencies
+  331  npm install
+  332  # Step 4: Install styled-components for styling
+  333  npm install styled-components
+  334  # Step 5: Install react-router-dom for routing
+  335  npm install react-router-dom
+  336  code .
+  337  code .
+  338  docker build --tag pyboy-rl
+  339  ls
+  340  pwd
+  341  cd ../../
+  342  ls
+  343  cd  ~/OneDrive - Lael Varella Educacao E Cultura Ltda/Avulsos/Documentos/Codigos/didatico/
+  344  cd  ~/OneDrive - Lael Varella Educacao E Cultura Ltda/Avulsos
+  345  cd Avulsos/Documentos/Codigos/didatico/BackEnd1/2024-2/
+  346  ls
+  347  ls
+  348  cd auth/
+  349  ls
+  350  npm run dev
+  351  cd ~/
+  352  aws sso login --profile flaviomotta.infox
+  353  set PROFILE=flaviomotta.infox
+  354  set RDSHOST=pje1g-tmp-db.calfqy9ugi3w.sa-east-1.rds.amazonaws.com
+  355  set IAMUSER=flaviomotta.infox
+  356  set DBNAME=pje
+  357  echo %DBNAME%
+  358  echo %PROFILE%
+  359  DBNAME
+  360  echo $DBNAME
+  361  for /F "usebackq tokens=* delims=" %g in (`aws rds generate-db-auth-token --hostname %RDSHOST% --port 5432 --region sa-east-1 --username %IAMUSER% --profile %PROFILE%`) do set PGPASSWORD=%g
+  362  cd template-async-await-promises/
+  363  code .
+  364  code .
+  365  code .
+  366  code .
+  367  code .
+  368  mysql -u root -p -h 127.0.0.1 -P 3307
+  369  ssh root@154.53.55.253 -p14137
+  370  ssh root@154.53.55.253 -p14137
+  371  ssh root@154.53.55.253 -p14137
+  372  ssh root@154.53.55.253
+  373  ssh root@154.53.55.246 -p12613
+  374  ssh root@154.53.55.253 -p14137
+  375  ssh root@154.53.55.253 -p14137
+  376  ssh root@154.53.55.253 -p3306
+  377  mysql -u flavio -p -h 127.0.0.1
+  378  mysql -u flavio -p -h 127.0.0.1
+  379  ls
+  380  pwd
+  381  mysql --version
+  382  mysql -u flavio -p -h 127.0.0.1
+  383  mysql -u flavio -p -h <IP_REMOTO> -P 3306
+  384  mysql -u flavio -p -h 154.53.55.253 -P 3306
+  385  mysql -u flavio -p -h 154.53.55.253 -P 3306
+  386  mysql -u flavio -p -h 154.53.55.253 -P 14137
+  387  ssh root@154.53.55.253 -p14137
+  388  ssh root@154.53.55.253 -p14137
+  389  ssh root@154.53.55.253 -p14137
+  390  ssh root@154.53.55.253 -p14137
+  391  ssh root@154.53.55.253 -p14137
+  392  ssh root@154.53.55.246 -p12613
+  393  ssh root@154.53.55.253 -p14137
+  394  ssh root@154.53.55.246 -p12613
+  395  ssh root@154.53.55.253 -p14137
+  396  ssh root@154.53.55.253 -p14137
+  397  code .
+  398  code ,
+  399  code .
+  400  docker --version
+  401  ssh administrator@192.168.1.30
+  402  ssh administrator@192.168.1.30
+  403  ssh administrator@192.168.1.30
+  404  ssh administrator@192.168.1.30
+  405  ssh administrator@192.168.1.30
+  406  ssh administrator@192.168.1.30
+  407  ssh administrator@192.168.1.30
+  408  ssh administrator@192.168.1.30
+  409  ssh administrator@192.168.1.30
+  410  curl 187.12.115.178:3000/api/patients/157
+  411  curl 187.12.115.178:3000/api/patients/157
+  412  ssh administrator@192.168.1.30
+  413  ssh administrator@192.168.1.30
+  414  npm run start
+  415  npm run start
+  416  npm run start
+  417  ls
+  418  npm run start
+  419  npm run dev
+  420  curl http://[IP_DO_SERVIDOR]:3000/api/patients/157
+  421  curl http://187.12.115.178:3000/api/patients/157
+  422  sudo netstat -tulnp | grep -E '3000|3001|3306'
+  423  ssh administrator@192.168.11.30
+  424  ssh administrator@192.168.11.30
+  425  ssh administrator@192.168.11.30
+  426  ssh administrator@192.168.11.30
+  427  ssh administrator@192.168.1.30
+  428  ssh administrator@192.168.1.30c
+  429  ssh administrator@192.168.1.30
+  430  ssh administrator@192.168.1.30
+  431  ssh administrator@192.168.1.30
+  432  ssh administrator@192.168.1.30
+  433  ssh administrator@192.168.1.30
+  434  ssh administrator@192.168.1.30
+  435  curl 187.12.115.178:3000/api/patients/157
+  436  curl 187.12.115.178:3000/api/patients/157
+  437  curl 192.168.1.30:3000/api/patients/157
+  438  curl http://192.168.1.30:3000/api/patients/157
+  439  curl http://192.168.1.30:3000/api/patients/157
+  440  ls
+  441  curl http://localhost:3001/patients/patient-id/2
+  442  curl http://localhost:3001/patients/1
+  443  curl http://localhost:3001/patients/
+  444  curl http://localhost:3001/patients/
+  445  ssh administrator@192.168.1.30
+  446  ssh administrator@192.168.1.30
+  447  cd Downloads/Trabs\ -\ Limpeza\ e\ regras\ de\ associação\ em\ compras/todos/bkp/
+  448  ssh administrator@192.168.1.30
+  449  ssh administrator@192.168.1.30
+  450  ssh administrator@192.168.1.30
+  451  ssh administrator@192.168.1.30
+  452  ssh administrator@192.168.1.30
+  453  ssh administrator@192.168.1.30
+  454  ssh administrator@192.168.1.30
+  455  ssh administrator@192.168.1.30
+  456  python IA.py 
+  457  ping epqv.fcv.org.br
+  458  ssh administrator@192.168.1.30
+  459  ssh administrator@192.168.1.30
+  460  ssh administrator@192.168.1.30
+  461  ssh administrator@192.168.1.30
+  462  ssh administrator@192.168.1.30
+  463  ssh administrator@192.168.1.30
+  464  ssh administrator@192.168.1.30
+  465  ssh administrator@192.168.1.30
+  466  ssh administrator@192.168.1.30
+  467  ssh administrator@192.168.1.30
+  468  ssh administrator@192.168.1.30
+  469  ssh administrator@192.168.1.30
+  470  ssh administrator@192.168.1.30
+  471  ssh administrator@192.168.1.30
+  472  #!/bin/bash
+  473  echo "=== Dashboard de Acompanhamento de Egressos - PSU ==="
+  474  echo "Iniciando aplicação..."
+  475  echo ""
+  476  # Verificar se Python está instalado
+  477  if ! command -v python3 &> /dev/null; then     echo "❌ Python3 não encontrado. Por favor, instale o Python 3.7 ou superior.";     exit 1; fi
+  478  # Verificar se as dependências estão instaladas
+  479  echo "🔍 Verificando dependências..."
+  480  python3 -c "import dash, plotly, pandas" 2>/dev/null
+  481  if [ $? -ne 0 ]; then     echo "📦 Instalando dependências necessárias...";     pip install dash plotly dash-bootstrap-components pandas openpyxl;     if [ $? -ne 0 ]; then         echo "❌ Erro ao instalar dependências. Verifique sua conexão com a internet.";         exit 1;     fi; fi
+  482  echo "✅ Dependências verificadas com sucesso!"
+  483  echo ""
+  484  # Executar o dashboard
+  485  echo "🚀 Iniciando dashboard..."
+  486  echo "📊 Acesse no navegador: http://localhost:8050"
+  487  echo "⏹️  Para parar, pressione Ctrl+C"
+  488  echo ""
+  489  python3 dashboard_egressos.py
+  490  cd BackEnd1/2025-2/PrimeiroProjeto/
+  491  cd ../
+  492  rm -r PrimeiroProjeto/
+  493  ls
+  494  npm init -y
+  495  rm package.json 
+  496  ls
+  497  mkdir PrimeiroProjeto
+  498  npm init 
+  499  cd PrimeiroProjeto/
+  500  npm init
+  501  tsc -init
+  502  npm install express
+  503  npm i express
+  504  npm i cors
+  505  npm i --save-dev typescript @types/express @types/node @types/cors ts-node-dev
+  506  npx ts-node-dev src/index
+  507  clear
+  508  npm run dev
+  509  npm run dev
+  510  history >> cola.txt
