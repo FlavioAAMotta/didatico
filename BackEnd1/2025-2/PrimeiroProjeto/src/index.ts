@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 
 const app = express();
@@ -6,18 +6,47 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const pokemons = [
-    {nome: "Pikachumbo", tipo:"Elétrico"},
-    {nome: "Charmano", tipo:"Fogo"},
-    {nome: "Bulbassalto", tipo:"Planta"},
-    {nome: "Ratatatatatata", tipo:"Normal"},
-    {nome: "Alakasamba", tipo:"Psiquíco"},
+interface Pokemon {
+    id: number,
+    nome: string,
+    tipo: string
+}
+
+const pokemons: Pokemon[] = [
+    { id: 1, nome: "Pikachumbo", tipo: "Elétrico" },
+    { id: 2, nome: "Charmano", tipo: "Fogo" },
+    { id: 3, nome: "Bulbassalto", tipo: "Planta" },
+    { id: 4, nome: "Ratatatatatata", tipo: "Normal" },
+    { id: 5, nome: "Alakasamba", tipo: "Psiquíco" },
 ]
 
-app.get("/pokemons", (req, res) =>{
+app.get("/pokemons", (req: Request, res: Response) => {
     res.status(200).json(pokemons);
 })
 
-app.listen(3000, ()=>{
+app.get("/pokemons/:id", (req: Request, res: Response) => {
+    const id = Number(req.params.id);
+    let pokemon;
+    for (let i = 0; i < pokemons.length; i++) {
+        if (pokemons[i]!.id === id) {
+            pokemon = pokemons[i];
+        }
+    }
+    res.status(200).json(pokemon);
+})
+
+app.post("/pokemons", (req: Request, res: Response) => {
+    // body -> id, nome e tipo
+    const {id, nome, tipo} = req.body;
+    let pokemonNovo:Pokemon ={
+        id: id,
+        nome: nome,
+        tipo: tipo
+    }
+    pokemons.push(pokemonNovo);
+    res.status(201).send("Pokemon criado");
+})
+
+app.listen(3000, () => {
     console.log("Servidor Executando")
 })
