@@ -19,6 +19,28 @@ const pokemons: Pokemon[] = [
     { id: 4, nome: "Ratatatatatata", tipo: "Normal" },
     { id: 5, nome: "Alakasamba", tipo: "Psiquíco" },
 ]
+//localhost:3000/pokemons/search?type=agua&name=star
+app.get("/pokemons/search", (req: Request, res: Response) => {
+    const {name, type} = req.query;
+    console.log("Query parameters:", req.query);
+
+
+
+
+    
+    let pokemonsRetornados = pokemons;
+    if(name){
+        pokemonsRetornados = pokemons.filter((pokemon) => 
+            pokemon.nome.toLowerCase().includes(name.toString().toLowerCase())
+        );
+    }else if(type){
+        pokemonsRetornados = pokemons.filter((pokemon) => 
+            pokemon.tipo.toLowerCase().includes(type.toString().toLowerCase())
+        );
+    }
+    console.log("Pokémons encontrados:", pokemonsRetornados);
+    res.status(200).json(pokemonsRetornados);
+})
 
 app.get("/pokemons", (req: Request, res: Response) => {
     res.status(200).json(pokemons);
@@ -34,6 +56,8 @@ app.get("/pokemons/:id", (req: Request, res: Response) => {
     }
     res.status(200).json(pokemon);
 })
+
+
 
 app.post("/pokemons", (req: Request, res: Response) => {
     // body -> id, nome e tipo
