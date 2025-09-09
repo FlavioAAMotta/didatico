@@ -9,25 +9,50 @@ app.use(express.json());
 interface Pokemon {
     id: number,
     nome: string,
-    tipo: string
+    tipo: string,
+    hp: number
 }
 
-const pokemons: Pokemon[] = [
-    { id: 1, nome: "Pikachumbo", tipo: "Elétrico" },
-    { id: 2, nome: "Charmano", tipo: "Fogo" },
-    { id: 3, nome: "Bulbassalto", tipo: "Planta" },
-    { id: 4, nome: "Ratatatatatata", tipo: "Normal" },
-    { id: 5, nome: "Alakasamba", tipo: "Psiquíco" },
+let pokemons: Pokemon[] = [
+    { id: 1, nome: "Pikachumbo", tipo: "Elétrico", hp:500 },
+    { id: 2, nome: "Charmano", tipo: "Fogo", hp:50 },
+    { id: 3, nome: "Bulbassalto", tipo: "Planta", hp:250 },
+    { id: 4, nome: "Ratatatatatata", tipo: "Normal", hp:100 },
+    { id: 5, nome: "Alakasamba", tipo: "Psiquíco", hp:1500 },
 ]
+
+app.delete("/pokemons/:id", (req: Request, res: Response)=>{
+    const id = Number(req.params);
+    pokemons = pokemons.filter((pokemon)=>{
+        return pokemon.id !== id;
+    });
+    res.status(200).send("Pokemon deletado com sucesso!")
+})
+
+app.patch("/pokemons/:id", (req: Request, res: Response) => {
+    const id = parseInt(req.params.id);
+    const atualizacoes = req.body;
+
+    let pokemon = pokemons.find(pkmn=> pkmn.id === id);
+
+    if(!pokemon){
+        res.status(404).send("Pokemon Não encontrado!");
+    }
+    pokemon = {...pokemon, ...atualizacoes};
+
+    pokemons = pokemons.map((pkmn) => (pkmn.id === id ? pokemon : pkmn)) as Pokemon[];
+
+    res.json(pokemon);
+})
+
+app.get("/pokemons", (req: Request, res: Response) => {
+    res.status(200).json(pokemons);
+})
 //localhost:3000/pokemons/search?type=agua&name=star
 app.get("/pokemons/search", (req: Request, res: Response) => {
     const {name, type} = req.query;
     console.log("Query parameters:", req.query);
 
-
-
-
-    
     let pokemonsRetornados = pokemons;
     if(name){
         pokemonsRetornados = pokemons.filter((pokemon) => 
@@ -42,11 +67,8 @@ app.get("/pokemons/search", (req: Request, res: Response) => {
     res.status(200).json(pokemonsRetornados);
 })
 
-app.get("/pokemons", (req: Request, res: Response) => {
-    res.status(200).json(pokemons);
-})
-
 app.get("/pokemons/:id", (req: Request, res: Response) => {
+    console.log("Entrou aqui");
     const id = Number(req.params.id);
     let pokemon;
     for (let i = 0; i < pokemons.length; i++) {
@@ -59,13 +81,16 @@ app.get("/pokemons/:id", (req: Request, res: Response) => {
 
 
 
+
+
 app.post("/pokemons", (req: Request, res: Response) => {
     // body -> id, nome e tipo
-    const {id, nome, tipo} = req.body;
+    const {id, nome, tipo, hp} = req.body;
     let pokemonNovo:Pokemon ={
         id: id,
         nome: nome,
-        tipo: tipo
+        tipo: tipo,
+        hp: hp
     }
     pokemons.push(pokemonNovo);
     res.status(201).send("Pokemon criado");
