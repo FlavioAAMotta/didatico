@@ -1,0 +1,130 @@
+npm init -y
+npm i express @types/express cors @types/cors
+npx tsc -init
+npm i --save-dev typescript 
+npx ts-node-dev src/index
+modificar tsconfig.json
+	"outDir": "./build"
+	"rootDir": "./src"
+criar src e build
+
+Criar app.ts
+	import express from 'express'
+	import cors from 'cors'
+
+	export const app = express()
+
+	app.use(express.json())
+	app.use(cors())
+	
+	app.listen(3003, () => {
+	   console.log('Servidor rodando na porta 3003')
+	})
+
+criando index.ts dentro do src
+	import { app } from "./app";
+	import { userRouter } from "./routes/userRouter";
+
+
+	app.use('/users', userRouter)
+	// app.use('/songs, songsRouter)
+	// app.use('/playlists, playlistsRouter)
+
+Criar pastas
+business
+controller
+data
+routes
+model*
+
+Exemplo de routes
+	import express from 'express'
+	import { UserController } from '../controller/UserController';
+
+	export const userRouter = express.Router();
+
+	const userController = new UserController();
+
+	userRouter.post('/login', userController.login)
+	userRouter.post('/signup', userController.signup)
+	// userRouter.get('/view', userController.view)
+
+Exemplo de Controller
+import { Request, Response } from 'express'
+import { UserBusiness } from '../business/UserBusiness';
+
+
+export class UserController {
+    userBusiness = new UserBusiness()
+    login = async (req: Request, res: Response) => {
+        try {
+            const { email, password } = req.body;
+            const token = this.userBusiness.login(email, password);
+            res.send(token);
+        } catch (error: any) {
+            res.send(error.sqlMessage || error.message);
+        }
+    }
+}
+
+Exemplo de business:
+// Onde aplico minhas regras de negócio
+
+import { compare } from "bcryptjs";
+import { UserData } from "../data/UserData";
+import { generateToken, payload } from "../middlewares/authenticator";
+import { generateId } from "../middlewares/idGenerator";
+import { userRole } from "../types/user";
+
+export class UserBusiness {
+    userData = new UserData()
+    login = (email: string, password: string) => {
+        try {
+
+            if (!email || !password) {
+                throw new Error("Campos faltantes")
+            }
+
+            const user = this.userData.buscarUsuarioPorEmail(email) as any;
+            if (!user) {
+                throw new Error("Usuario inexistente");
+            }
+
+            const auth = await compare(password, user.password);
+
+            if (!auth) {
+                throw new Error("Credenciais inválidas");
+            }
+
+            const payload: payload = {
+                id: user.id,
+                role: user.role
+            }
+
+            const token = await generateToken(payload)
+
+            return token
+
+        } catch (error: any) {
+            throw new Error(error)
+        }
+    }
+}
+
+Exemplo de data:
+
+import { connection } from "../connection";
+import { user } from "../types/user";
+
+export class UserData {
+    buscarUsuarioPorEmail = (email: string) => {
+        try {
+            const [user] = await connection('to_do_list_users').where({ email });
+            return user;
+        } catch (error: any) {
+            throw new Error(error.sqlMessage || error.message);
+        }
+    }
+}
+
+
