@@ -21,8 +21,13 @@ public class Recursividade{
       return multiplicacao(a-1,b) + b;
    }
    
+   public static void teste(){
+      return;
+   }
+   
    public static void main(String[] args){
       System.out.println(fatorial(4));
       System.out.println(multiplicacao(4,3));
+      teste();
    }
 }
