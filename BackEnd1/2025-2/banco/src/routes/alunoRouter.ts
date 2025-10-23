@@ -6,4 +6,4 @@ export const alunoRouter = express.Router();
 const alunoController = new AlunoController();
 
 alunoRouter.post('/', alunoController.create);
-// alunoRouter.get('/', alunoController.getAll);
+alunoRouter.get('/', alunoController.getAllUsers);
