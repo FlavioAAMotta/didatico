@@ -1,34 +1,44 @@
-    // Usado quando a subárvore esquerda-esquerda está desbalanceada
-    public static Node rotacaoDireita(Node y) {
-        Node x = y.esquerda;
-        Node T2 = x.direita;
-        // Realizar rotação
-        x.direita = y;
-        y.esquerda = T2;
-        // Atualizar alturas
-        atualizarAltura(y);
-        atualizarAltura(x);
-        return x; // Nova raiz
+public class Rotacoes{
+
+    public void balancear(No no){
+        int balanceamento = calcularBalanceamento(no);
+        if(balanceamento > 1){
+            if(calcularBalanceamento(no.getDireita()) >= 0){
+                no = rotacaoEsquerda(no);
+            }else{
+                no.setDireita(rotacaoDireita(no.getDireita()));
+                no = rotacaoEsquerda(no);
+            }
+        }else if(balanceamento < -1){
+            if(calcularBalanceamento(no.getEsquerda()) <= 0){
+                no = rotacaoDireita(no);
+            }else{
+                no.setEsquerda(rotacaoEsquerda(no.getEsquerda()));
+                no = rotacaoDireita(no);
+            }
+        }
+        return no;
     }
-    // Usado quando a subárvore direita-direita está desbalanceada
-    public static Node rotacaoEsquerda(Node x) {
-        Node y = x.direita;
-        Node T2 = y.esquerda;
-        // Realizar rotação
-        y.esquerda = x;
-        x.direita = T2;
-        // Atualizar alturas
-        atualizarAltura(x);
-        atualizarAltura(y);
-        return y; // Nova raiz
+
+    public No rotacaoDireita(No x){
+        No y = x.getEsquerda();
+        No z = y.getDireita();
+        y.setDireita(x);
+        x.setEsquerda(z);
+        return y;
     }
-    // Usado quando a subárvore esquerda-direita está desbalanceada
-    public static Node rotacaoEsquerdaDireita(Node node) {
-        node.esquerda = rotacaoEsquerda(node.esquerda);
-        return rotacaoDireita(node);
+    public No rotacaoEsquerda(No x){
+        No y = x.getDireita();
+        No z = y.getEsquerda();
+        y.setEsquerda(x);
+        x.setDireita(z);
+        return y;
     }
-    // Usado quando a subárvore direita-esquerda está desbalanceada
-    public static Node rotacaoDireitaEsquerda(Node node) {
-        node.direita = rotacaoDireita(node.direita);
-        return rotacaoEsquerda(node);
+    public No rotacaoEsquerdaDireita(No no){
+        no.setEsquerda(rotacaoEsquerda(no.getEsquerda()));
+        return rotacaoDireita(no);
+    }
+    public No rotacaoDireitaEsquerda(No no){
+        no.setDireita(rotacaoDireita(no.getDireita()));
+        return rotacaoEsquerda(no);
     }
