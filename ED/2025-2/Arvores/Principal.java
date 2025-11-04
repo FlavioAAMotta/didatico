@@ -18,8 +18,7 @@ public class Principal{
       usuarios.inserir(1);
       usuarios.inserir(10);
       usuarios.inserir(8);
-      System.out.println("Altura: " + usuarios.calcularAltura());
-      usuarios.calcularNos();
+      usuarios.travessiaEmOrdem();
    }
    
 }

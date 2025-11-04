@@ -1,5 +1,4 @@
 public class Rotacoes{
-
     public void balancear(No no){
         int balanceamento = calcularBalanceamento(no);
         if(balanceamento > 1){
@@ -32,6 +31,7 @@ public class Rotacoes{
         No z = y.getEsquerda();
         y.setEsquerda(x);
         x.setDireita(z);
+        
         return y;
     }
     public No rotacaoEsquerdaDireita(No no){
@@ -42,3 +42,4 @@ public class Rotacoes{
         no.setDireita(rotacaoDireita(no.getDireita()));
         return rotacaoEsquerda(no);
     }
+}

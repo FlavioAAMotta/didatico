@@ -39,58 +39,20 @@ public class Arvore{
       }
    }
    
-   //1. Implemente uma função para calcular a altura da árvore.
-   public int calcularAltura(){
-      return calcularAltura(raiz);
-   }
-   
-   private int calcularAltura(No raiz){
-      if(raiz == null){
-         return 0;
-      }
-      int alturaEsquerda = calcularAltura(raiz.getEsquerda());
-      int alturaDireita = calcularAltura(raiz.getDireita());
-      return Math.max(alturaEsquerda, alturaDireita) + 1;
-   }
-   //2. Implemente uma função para calcular a quantidade de nós na árvore.
-   public int calcularNos(){
-      if(raiz == null){
-         return 0;
-      }
-      return calcularNos(raiz);
-   }
-   
-   private int calcularNos(No raiz){
-      if(ehFolha(raiz)){
-         return 1;
-      }
-      int nosEsquerda = calcularNos(raiz.getEsquerda());
-      int nosDireita = calcularNos(raiz.getDireita());
-      return nosEsquerda + nosDireita + 1;
-   }
-   
-   private boolean ehFolha(No raiz){
-      if(raiz.getEsquerda() == null && raiz.getDireita() == null){
-         return true;
+   public void travessiaEmOrdem(){
+      if(this.raiz == null){
+         System.out.println("Árvore vazia");
       }else{
-         return false;
+         travessiaEmOrdem(raiz);
       }
    }
    
-   //3. Implemente uma função para buscar o menor valor da árvore
-   public int buscarMenorValor(){
+   private void travessiaEmOrdem(No raiz){
       if(raiz == null){
-         throw new Error();
-      }else{
-         buscarMenorValor(raiz);
+         return;
       }
+      System.out.println(raiz.getId());
+      travessiaEmOrdem(raiz.getEsquerda());
+      travessiaEmOrdem(raiz.getDireita());
    }
-   
-   private int buscarMenorValor(No raiz){
-      if(raiz.getEsquerda() == null){
-         return raiz.getId();
-      }
-      return buscarMenorValor(raiz.esquerda);      
-   }
-   
 }
