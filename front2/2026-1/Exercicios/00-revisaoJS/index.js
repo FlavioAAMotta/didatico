@@ -47,3 +47,14 @@ const recuperarNumeros = (vetor) =>{
 
 const vetor = [5,1,3,6,2,8,9];
 console.log(recuperarNumeros(vetor))
+
+
+const verificarTipoTriangulo = (ladoA, ladoB, ladoC) =>{
+    if(ladoA == ladoB && ladoA == ladoC){
+        return "Equilatero";
+    }else if(ladoA != ladoB && ladoA != ladoC && ladoB != ladoC){
+        return "Escaleno";
+    }else{
+        return "Isóceles"
+    }
+}
