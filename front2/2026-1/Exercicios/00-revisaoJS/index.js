@@ -34,3 +34,16 @@ const propriedadesNumeros = (num1, num2) =>{
 const retorno = propriedadesNumeros(14,7);
 
 console.log(retorno.maior);
+
+const recuperarNumeros = (vetor) =>{
+    if(vetor.length <= 1){
+        return;
+    }
+    const ordenado = vetor.sort((a, b)=> a - b);
+    const segundoMenor = ordenado[1];
+    const segundoMaior = ordenado[ordenado.length-2];
+    return [segundoMaior, segundoMenor];
+}
+
+const vetor = [5,1,3,6,2,8,9];
+console.log(recuperarNumeros(vetor))
