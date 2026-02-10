@@ -20,3 +20,12 @@ const mensagens = poodles.map((poodle)=>{
 })
 
 console.log(mensagens);
+
+
+const numeros = [0,1,2,3,4,5,6,7,8,9,10]
+
+const dobros = numeros.map((numero)=>{
+    return numero * 2;
+})
+
+console.log(dobros)
