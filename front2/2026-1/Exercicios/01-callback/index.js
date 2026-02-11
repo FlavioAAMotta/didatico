@@ -15,8 +15,8 @@ const poodles = pets.filter((pet)=>{
     return pet.raca == "Poodle"
 })
 
-const mensagens = poodles.map((poodle)=>{
-    return `Você ganhou um cupom de desconto de 10% para tosar o/a ${poodle.nome}`
+const mensagens = poodles.map((poodle, batata)=>{
+    return `Você ganhou um cupom de desconto de 10% para tosar o/a ${poodle.nome}, você é o ${batata + 1} da fila`
 })
 
 console.log(mensagens);
