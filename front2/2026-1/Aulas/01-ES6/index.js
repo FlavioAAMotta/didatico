@@ -84,3 +84,4 @@ const alunos = [
 const novo = {nome: "Cristhian", idade: 22, altura:"1,82"}
 
 const novaLista = [...alunos, novo]
+
