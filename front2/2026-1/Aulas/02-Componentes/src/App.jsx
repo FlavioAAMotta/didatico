@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <h1>Página principal</h1>
-      <p>Teste de home page</p>
+      <p className="bg-green-500">Teste de home page</p>
 
       <VideoCard img={'https://picsum.photos/id/247/200'} titulo={'Veneza'}/>
       <VideoCard  img={'https://picsum.photos/id/24/200'}/>
