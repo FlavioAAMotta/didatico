@@ -5,7 +5,7 @@ export function VideoCard(props) {
     }
 
     return (<div>
-        <h4>{titulo}</h4>
+        <h4 className="bg-red-500">{titulo}</h4>
         <img src={props.img} />
     </div>)
 }
