@@ -15,10 +15,10 @@ export const Lista = () => {
         setListaTarefa(listaTarefaRenderizada)
     }
 
-    const removerItem = (tarefa) => {
+    const removerItem = (index) => {
         const listaTarefaRenderizada = [...listaTarefa];
-        const listaFiltrada = listaTarefaRenderizada.filter((tarefaVetor) => {
-            return tarefaVetor != tarefa;
+        const listaFiltrada = listaTarefaRenderizada.filter((tarefaVetor, indice) => {
+            return index != indice;
         })
         setListaTarefa(listaFiltrada)
     }
@@ -33,7 +33,7 @@ export const Lista = () => {
             {listaTarefa.map((tarefa, index) => {
                 return <div key={index} className="item-container">
                     <p>{tarefa}</p>
-                    <div className="remove" onClick={() => removerItem(tarefa)}>X</div>
+                    <div className="remove" onClick={() => removerItem(index)}>X</div>
                 </div>
             })}
         </div>
