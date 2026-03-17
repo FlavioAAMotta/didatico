@@ -1,0 +1,22 @@
+div{
+    width: 200px;
+    height: 200px;
+}
+
+.vermelho{
+    background-color: red;
+    color: white;
+}
+
+.verde{
+    position: relative;
+    top: 30px;
+    left: 50px;
+    background-color: green;
+    color: white;
+}
+
+.amarelo{
+    background-color: yellow;
+    color: black;
+}
