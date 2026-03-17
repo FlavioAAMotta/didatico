@@ -1,10 +1,10 @@
-import { useState } from 'react'
 import './App.css'
+import { Lista } from './components/Lista'
 
 function App() {
 
   return <>
-    <h1>Listas</h1>
+    <Lista />
   </>
 }
 
