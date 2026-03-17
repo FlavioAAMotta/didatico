@@ -1,3 +1,23 @@
+.lista-container{
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-container{
+  border: 1px solid black;
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.remove:hover{
+  cursor: pointer;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
