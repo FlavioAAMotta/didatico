@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    width: 100vw;
+    height: 100px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
