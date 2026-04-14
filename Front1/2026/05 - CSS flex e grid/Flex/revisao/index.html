@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridFlow Analytics - Dashboard Didático</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-search">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Pesquisar dados...">
+            </div>
+            
+            <div class="header-user-actions">
+                <div class="notification-icon">🔔</div>
+                <div class="user-profile">
+                    <div class="user-avatar">AD</div>
+                    <span class="user-name">Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <aside class="app-sidebar">
+            <div class="logo-container">
+                <span class="logo-text-grid">Grid</span><span class="logo-text-flow">Flow</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active"><span class="sidebar-icon">📊</span> Dashboard</a></li>
+                    <li><a href="#"><span class="sidebar-icon">📈</span> Relatórios</a></li>
+                    <li><a href="#"><span class="sidebar-icon">👥</span> Clientes</a></li>
+                    <li><a href="#"><span class="sidebar-icon">⚙️</span> Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="app-main">
+            <div class="main-header">
+                <h1>Visão Geral do Sistema</h1>
+                <p>Bem-vindo ao dashboard da GridFlow Analytics.</p>
+            </div>
+
+            <section class="stats-grid">
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div>
+                            <div class="stat-title">Receita Total</div>
+                            <div class="stat-value">R$ 45.230</div>
+                        </div>
+                        <div class="stat-icon">💰</div>
+                    </div>
+                    <div class="stat-card-footer">
+                        <span class="trend-up">▲ 12.5%</span> vs. mês passado
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div>
+                            <div class="stat-title">Novos Assinantes</div>
+                            <div class="stat-value">+ 350</div>
+                        </div>
+                        <div class="stat-icon">👥</div>
+                    </div>
+                    <div class="stat-card-footer">
+                        <span class="trend-up">▲ 8.1%</span> vs. mês passado
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div>
+                            <div class="stat-title">Taxa de Churn</div>
+                            <div class="stat-value">2.4%</div>
+                        </div>
+                        <div class="stat-icon">📉</div>
+                    </div>
+                    <div class="stat-card-footer">
+                        <span class="trend-down">▼ 0.5%</span> estável
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="content-secondary">
+                
+                <div class="data-table-container">
+                    <h2 class="panel-header">Últimas Transações</h2>
+                    <table class="simple-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Cliente</th>
+                                <th>Data</th>
+                                <th>Valor</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1234</td>
+                                <td>Empresa Alpha</td>
+                                <td>15/10/2023</td>
+                                <td>R$ 1.200</td>
+                                <td><span class="status-badge status-active">Ativo</span></td>
+                            </tr>
+                            <tr>
+                                <td>#1233</td>
+                                <td>Tech Solutions</td>
+                                <td>14/10/2023</td>
+                                <td>R$ 850</td>
+                                <td><span class="status-badge status-active">Ativo</span></td>
+                            </tr>
+                            <tr>
+                                <td>#1232</td>
+                                <td>Estúdio Beta</td>
+                                <td>14/10/2023</td>
+                                <td>R$ 2.100</td>
+                                <td><span class="status-badge status-pending">Pendente</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="recent-activity">
+                    <h2 class="panel-header">Atividade Recente</h2>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        [Placeholder para feed de atividades usando Flexbox...]
+                    </p>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
