@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Position — Guia Didático</title>
+  <style>
+    /* =========================================
+       RESET & BASE
+    ========================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    /* =========================================
+       FIXED — a própria navbar demonstra fixed
+    ========================================= */
+    nav {
+      position: fixed;          /* ← FIXED em ação */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: #1e293b;
+      border-bottom: 2px solid #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: .6rem 2rem;
+      font-size: .85rem;
+    }
+
+    nav .badge {
+      background: #38bdf8;
+      color: #0f172a;
+      font-weight: 700;
+      padding: .15rem .5rem;
+      border-radius: 4px;
+    }
+
+    nav a {
+      color: #94a3b8;
+      text-decoration: none;
+    }
+    nav a:hover { color: #e2e8f0; }
+
+    /* =========================================
+       LAYOUT PRINCIPAL
+    ========================================= */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 90px 1.5rem 4rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #38bdf8;
+      margin-bottom: .3rem;
+    }
+
+    .subtitle {
+      color: #64748b;
+      margin-bottom: 2.5rem;
+    }
+
+    /* =========================================
+       CARDS DE SEÇÃO
+    ========================================= */
+    .section {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      border-left: 4px solid #38bdf8;
+    }
+
+    .section h2 {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: 1.3rem;
+      margin-bottom: .4rem;
+    }
+
+    .section h2 .tag {
+      font-family: monospace;
+      font-size: 1rem;
+      background: #0f172a;
+      color: #fbbf24;
+      padding: .1rem .5rem;
+      border-radius: 4px;
+    }
+
+    .section p {
+      color: #94a3b8;
+      margin-bottom: 1rem;
+      font-size: .95rem;
+    }
+
+    /* =========================================
+       PLAYGROUND COMPARTILHADO
+    ========================================= */
+    .playground {
+      background: #0f172a;
+      border: 1px dashed #334155;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      position: relative;        /* necessário para filhos absolute */
+      min-height: 140px;
+    }
+
+    .box {
+      width: 80px;
+      height: 80px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .7rem;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    /* =========================================
+       1. STATIC
+    ========================================= */
+    #demo-static .box {
+      background: #334155;
+      color: #94a3b8;
+      position: static;
+      display: inline-flex;
+      margin: 4px;
+    }
+
+    /* =========================================
+       2. RELATIVE
+    ========================================= */
+    #demo-relative .box {
+      background: #1d4ed8;
+      color: #bfdbfe;
+      display: inline-flex;
+      margin: 4px;
+    }
+
+    #demo-relative .box.moved {
+      position: relative;
+      top: 20px;
+      left: 30px;
+      background: #2563eb;
+      outline: 2px dashed #60a5fa;
+    }
+
+    #demo-relative .ghost {
+      width: 80px;
+      height: 80px;
+      border-radius: 6px;
+      border: 2px dashed #1d4ed8;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .65rem;
+      color: #475569;
+      vertical-align: top;
+      margin: 4px;
+    }
+
+    /* =========================================
+       3. ABSOLUTE
+    ========================================= */
+    #demo-absolute .pai {
+      position: relative;       /* âncora dos filhos absolute */
+      background: #1e3a5f;
+      border: 2px solid #38bdf8;
+      border-radius: 8px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      color: #38bdf8;
+    }
+
+    #demo-absolute .box {
+      position: absolute;
+      background: #0ea5e9;
+      color: #0f172a;
+      font-size: .65rem;
+    }
+
+    #demo-absolute .canto-tl { top: 8px;    left: 8px;  }
+    #demo-absolute .canto-tr { top: 8px;    right: 8px; }
+    #demo-absolute .canto-bl { bottom: 8px; left: 8px;  }
+    #demo-absolute .canto-br { bottom: 8px; right: 8px; }
+
+    /* =========================================
+       4. FIXED — demonstração inline
+    ========================================= */
+    #demo-fixed .simulador {
+      position: relative;
+      background: #0f172a;
+      border: 1px dashed #334155;
+      border-radius: 8px;
+      height: 200px;
+      overflow: hidden;          /* simula janela do browser */
+    }
+
+    #demo-fixed .conteudo-scroll {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    #demo-fixed .linha {
+      height: 16px;
+      border-radius: 4px;
+      background: #1e293b;
+    }
+
+    #demo-fixed .fixo {
+      position: absolute;        /* dentro do simulador = absolute, mas conceito = fixed */
+      bottom: 8px;
+      right: 8px;
+      background: #f43f5e;
+      color: #fff;
+      padding: .4rem .8rem;
+      border-radius: 20px;
+      font-size: .75rem;
+      font-weight: 700;
+    }
+
+    #demo-fixed .label-janela {
+      position: absolute;
+      top: 6px;
+      left: 10px;
+      font-size: .65rem;
+      color: #475569;
+    }
+
+    /* =========================================
+       5. STICKY
+    ========================================= */
+    #demo-sticky .scroll-container {
+      height: 200px;
+      overflow-y: auto;
+      background: #0f172a;
+      border: 1px dashed #334155;
+      border-radius: 8px;
+      padding: 0;
+    }
+
+    #demo-sticky .sticky-header {
+      position: sticky;
+      top: 0;
+      background: #7c3aed;
+      color: #ede9fe;
+      padding: .5rem 1rem;
+      font-weight: 700;
+      font-size: .8rem;
+      z-index: 1;
+    }
+
+    #demo-sticky .item {
+      padding: .5rem 1rem;
+      font-size: .85rem;
+      color: #94a3b8;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    /* =========================================
+       TABELA RESUMO
+    ========================================= */
+    .tabela-resumo {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+      margin-top: .5rem;
+    }
+
+    .tabela-resumo th {
+      background: #0f172a;
+      color: #38bdf8;
+      padding: .5rem .75rem;
+      text-align: left;
+      border-bottom: 2px solid #334155;
+    }
+
+    .tabela-resumo td {
+      padding: .45rem .75rem;
+      border-bottom: 1px solid #1e293b;
+      color: #94a3b8;
+    }
+
+    .tabela-resumo tr:last-child td { border-bottom: none; }
+    .tabela-resumo tr:hover td { background: #1e293b; }
+
+    /* =========================================
+       CODE SNIPPET
+    ========================================= */
+    .code {
+      background: #0f172a;
+      border: 1px solid #1e3a5f;
+      border-radius: 6px;
+      padding: .75rem 1rem;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: .8rem;
+      color: #7dd3fc;
+      overflow-x: auto;
+      white-space: pre;
+      margin-bottom: .5rem;
+    }
+
+    .code .kw  { color: #f472b6; }
+    .code .val { color: #a3e635; }
+    .code .cmt { color: #475569; }
+
+    /* =========================================
+       DICA
+    ========================================= */
+    .dica {
+      background: #14532d22;
+      border-left: 3px solid #4ade80;
+      padding: .5rem .75rem;
+      border-radius: 0 6px 6px 0;
+      font-size: .85rem;
+      color: #86efac;
+      margin-top: .75rem;
+    }
+
+    .aviso {
+      background: #7c340022;
+      border-left: 3px solid #fb923c;
+      padding: .5rem .75rem;
+      border-radius: 0 6px 6px 0;
+      font-size: .85rem;
+      color: #fdba74;
+      margin-top: .75rem;
+    }
+
+    /* =========================================
+       CORES DE SEÇÃO
+    ========================================= */
+    .section:nth-child(1) { border-color: #64748b; }
+    .section:nth-child(2) { border-color: #3b82f6; }
+    .section:nth-child(3) { border-color: #0ea5e9; }
+    .section:nth-child(4) { border-color: #f43f5e; }
+    .section:nth-child(5) { border-color: #7c3aed; }
+    .section:nth-child(6) { border-color: #38bdf8; }
+  </style>
+</head>
+<body>
+
+  <!-- =============================================
+       NAVBAR — demonstra position: fixed ao vivo
+  ============================================== -->
+  <nav>
+    <span class="badge">position: fixed</span>
+    <span>Esta navbar fica aqui enquanto você rola a página</span>
+    <a href="#static">static</a>
+    <a href="#relative">relative</a>
+    <a href="#absolute">absolute</a>
+    <a href="#fixed">fixed</a>
+    <a href="#sticky">sticky</a>
+  </nav>
+
+  <main>
+    <h1>CSS <code>position</code></h1>
+    <p class="subtitle">Entenda de vez como cada valor funciona — com demos visuais e código.</p>
+
+    <!-- ==========================================
+         1. STATIC
+    =========================================== -->
+    <div class="section" id="static">
+      <h2><span class="tag">static</span> — padrão do navegador</h2>
+      <p>
+        Todo elemento começa com <strong>position: static</strong>. O elemento segue o fluxo normal do documento.
+        As propriedades <code>top</code>, <code>right</code>, <code>bottom</code> e <code>left</code> <em>não têm efeito</em>.
+      </p>
+
+      <div class="playground" id="demo-static">
+        <div class="box">Caixa 1</div>
+        <div class="box">Caixa 2</div>
+        <div class="box">Caixa 3</div>
+      </div>
+
+      <div class="code"><span class="cmt">/* Padrão — não precisa nem declarar */</span>
+.caixa {
+  <span class="kw">position</span>: <span class="val">static</span>;
+  <span class="cmt">/* top / left não funcionam aqui */</span>
+}</div>
+
+      <div class="dica">Use quando não precisa alterar o posicionamento.</div>
+    </div>
+
+    <!-- ==========================================
+         2. RELATIVE
+    =========================================== -->
+    <div class="section" id="relative">
+      <h2><span class="tag">relative</span> — relativo a si mesmo</h2>
+      <p>
+        O elemento se move em relação a <strong>onde ele estaria normalmente</strong>.
+        O espaço original é <em>preservado</em> no layout (o fantasma abaixo mostra isso).
+      </p>
+
+      <div class="playground" id="demo-relative">
+        <div class="box">Caixa 1</div>
+        <div class="ghost">fantasma<br/>(espaço<br/>reservado)</div>
+        <div class="box moved">Caixa 2<br/>↓+20 →+30</div>
+        <div class="box">Caixa 3</div>
+      </div>
+
+      <div class="code">.caixa-2 {
+  <span class="kw">position</span>: <span class="val">relative</span>;
+  <span class="kw">top</span>:  <span class="val">20px</span>;  <span class="cmt">/* desce 20px do lugar original */</span>
+  <span class="kw">left</span>: <span class="val">30px</span>;  <span class="cmt">/* vai 30px para direita */</span>
+}</div>
+
+      <div class="dica">Muito usado como <strong>âncora</strong> para filhos com <code>position: absolute</code>.</div>
+    </div>
+
+    <!-- ==========================================
+         3. ABSOLUTE
+    =========================================== -->
+    <div class="section" id="absolute">
+      <h2><span class="tag">absolute</span> — relativo ao ancestral posicionado</h2>
+      <p>
+        O elemento <strong>sai do fluxo</strong> (não ocupa espaço). Ele se posiciona em relação
+        ao ancestral mais próximo que tenha <code>position</code> diferente de <code>static</code>.
+        Se não existir nenhum, usa o <code>&lt;html&gt;</code>.
+      </p>
+
+      <div class="playground" id="demo-absolute">
+        <div class="pai">
+          PAI (position: relative)
+          <div class="box canto-tl">top:8<br/>left:8</div>
+          <div class="box canto-tr">top:8<br/>right:8</div>
+          <div class="box canto-bl">bottom:8<br/>left:8</div>
+          <div class="box canto-br">bottom:8<br/>right:8</div>
+        </div>
+      </div>
+
+      <div class="code">.pai  { <span class="kw">position</span>: <span class="val">relative</span>; }  <span class="cmt">/* âncora */</span>
+
+.filho {
+  <span class="kw">position</span>: <span class="val">absolute</span>;
+  <span class="kw">top</span>:    <span class="val">8px</span>;
+  <span class="kw">right</span>:  <span class="val">8px</span>;
+}</div>
+
+      <div class="aviso">
+        Sem um pai posicionado, o filho absolute escapa para o canto do <code>&lt;html&gt;</code> — cuidado!
+      </div>
+    </div>
+
+    <!-- ==========================================
+         4. FIXED
+    =========================================== -->
+    <div class="section" id="fixed">
+      <h2><span class="tag">fixed</span> — relativo à janela do navegador</h2>
+      <p>
+        O elemento <strong>sai do fluxo</strong> e fica preso à <em>viewport</em> (janela).
+        Não se move com a rolagem da página. A navbar no topo desta página é um exemplo real.
+      </p>
+
+      <div class="playground" id="demo-fixed">
+        <div class="simulador">
+          <div class="label-janela">janela do navegador (simulada)</div>
+          <div class="conteudo-scroll">
+            <div class="linha" style="width:80%"></div>
+            <div class="linha" style="width:60%"></div>
+            <div class="linha" style="width:70%"></div>
+            <div class="linha" style="width:50%"></div>
+            <div class="linha" style="width:65%"></div>
+          </div>
+          <div class="fixo">+ Novo</div>
+        </div>
+      </div>
+
+      <div class="code">.botao-flutuante {
+  <span class="kw">position</span>: <span class="val">fixed</span>;
+  <span class="kw">bottom</span>: <span class="val">24px</span>;
+  <span class="kw">right</span>:  <span class="val">24px</span>;
+  <span class="kw">z-index</span>: <span class="val">999</span>;
+}</div>
+
+      <div class="dica">Ideal para navbars, chats flutuantes, botões de ação principal (FAB).</div>
+    </div>
+
+    <!-- ==========================================
+         5. STICKY
+    =========================================== -->
+    <div class="section" id="sticky">
+      <h2><span class="tag">sticky</span> — híbrido: relative + fixed</h2>
+      <p>
+        O elemento age como <strong>relative</strong> até atingir o limite definido (ex: <code>top: 0</code>),
+        depois "gruda" como <strong>fixed</strong> — mas <em>apenas dentro do seu contêiner pai</em>.
+        Role a lista abaixo para ver o cabeçalho grudando.
+      </p>
+
+      <div class="playground" id="demo-sticky" style="padding:0; min-height: auto;">
+        <div class="scroll-container">
+          <div class="sticky-header">Grupo A — gruda no topo ao rolar</div>
+          <div class="item">Item A1 — Lorem ipsum dolor sit</div>
+          <div class="item">Item A2 — Consectetur adipiscing</div>
+          <div class="item">Item A3 — Sed do eiusmod tempor</div>
+          <div class="item">Item A4 — Ut labore et dolore</div>
+          <div class="sticky-header">Grupo B — também gruda</div>
+          <div class="item">Item B1 — Quis nostrud exercit</div>
+          <div class="item">Item B2 — Ullamco laboris nisi</div>
+          <div class="item">Item B3 — Duis aute irure dolor</div>
+          <div class="item">Item B4 — Excepteur sint occaecat</div>
+          <div class="sticky-header">Grupo C</div>
+          <div class="item">Item C1 — Sunt in culpa qui</div>
+          <div class="item">Item C2 — Officia deserunt mollit</div>
+        </div>
+      </div>
+
+      <div class="code">.cabecalho-grupo {
+  <span class="kw">position</span>: <span class="val">sticky</span>;
+  <span class="kw">top</span>: <span class="val">0</span>;  <span class="cmt">/* gruda quando chega ao topo */</span>
+}</div>
+
+      <div class="aviso">
+        O pai precisa ter altura e overflow adequados. Se o pai for pequeno demais, o efeito não aparece.
+      </div>
+    </div>
+
+    <!-- ==========================================
+         TABELA RESUMO
+    =========================================== -->
+    <div class="section">
+      <h2>Resumo comparativo</h2>
+
+      <table class="tabela-resumo">
+        <thead>
+          <tr>
+            <th>Valor</th>
+            <th>Sai do fluxo?</th>
+            <th>Referência</th>
+            <th>top/left funcionam?</th>
+            <th>Rola com a página?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>static</strong></td>
+            <td>Não</td>
+            <td>Fluxo normal</td>
+            <td>Não</td>
+            <td>Sim</td>
+          </tr>
+          <tr>
+            <td><strong>relative</strong></td>
+            <td>Não (reserva espaço)</td>
+            <td>Posição original</td>
+            <td>Sim</td>
+            <td>Sim</td>
+          </tr>
+          <tr>
+            <td><strong>absolute</strong></td>
+            <td>Sim</td>
+            <td>Ancestral posicionado</td>
+            <td>Sim</td>
+            <td>Sim (com o pai)</td>
+          </tr>
+          <tr>
+            <td><strong>fixed</strong></td>
+            <td>Sim</td>
+            <td>Viewport (janela)</td>
+            <td>Sim</td>
+            <td>Não — fica fixo</td>
+          </tr>
+          <tr>
+            <td><strong>sticky</strong></td>
+            <td>Não → Sim (no limiar)</td>
+            <td>Contêiner pai</td>
+            <td>Sim (define o limiar)</td>
+            <td>Até o limiar, depois gruda</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+</body>
+</html>
