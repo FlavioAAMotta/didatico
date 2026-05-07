@@ -1,0 +1,28 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#header{
+    text-align: center;
+    background-color: gray;
+    color: white;
+    height: 100px;
+}
+
+.texto-importante{
+    background-color: violet;
+}
+
+.main-button{
+    background-color: #FF1122;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+    padding: 8px;
+}
+
+.main-button:hover{
+    background-color: white;
+    color: #ff1122;
+}

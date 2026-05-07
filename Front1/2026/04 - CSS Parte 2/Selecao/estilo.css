@@ -1,0 +1,5 @@
+div.container p.destaque {
+    color: red;
+    background-color: yellow;
+    padding: 5px;
+}

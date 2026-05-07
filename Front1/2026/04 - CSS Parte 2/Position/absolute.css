@@ -1,0 +1,29 @@
+div{
+    width: 200px;
+    height: 200px;
+}
+
+main{
+    position: relative;
+    background-color: lightgrey;
+    width: 700px;
+    height: 800px;
+}
+
+.vermelho{
+    background-color: red;
+    color: white;
+}
+
+.verde{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    background-color: green;
+    color: white;
+}
+
+.amarelo{
+    background-color: yellow;
+    color: black;
+}

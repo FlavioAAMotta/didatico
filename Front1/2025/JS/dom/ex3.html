@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="titulo">Título Antes da Mudança</h1>
+    <img id="imagem" src='img/pao.jpg' alt="Pão">
+    <button onclick="mudarAtributos()">Mudar Atributos</button>
+
+    <script>
+        function mudarAtributos() {
+            var imagem = document.getElementById('imagem');
+            imagem.setAttribute('src', 'img/paodequeijo.jpg');
+            imagem.setAttribute('alt', 'Pao de queijo');
+        }
+    </script>
+</body>
+
+</html>

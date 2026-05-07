@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .titulo-estilizado {
+            color: blue;
+            font-style: italic;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="titulo">Título Antes da Mudança</h1>
+    <button onclick="mudarAtributos()">Mudar Atributos</button>
+
+    <script>
+        function mudarAtributos() {
+            var titulo = document.getElementById('titulo');
+            titulo.textContent = 'Título Após a Mudança';
+            titulo.setAttribute('class', 'titulo-estilizado');
+        }
+    </script>
+</body>
+
+</html>
