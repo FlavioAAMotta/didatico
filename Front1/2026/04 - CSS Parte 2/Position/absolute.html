@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .text {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        /* Tooltip escondido por padrão */
+        .tooltip {
+            display: none;
+            position: absolute;
+            bottom: 125%;
+            /* aparece acima */
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #fff;
+            padding: 6px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        /* Mostra quando passa o mouse no pai */
+        .text:hover .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exemplo absolute</h1>
+    <div class="text">
+        Texto que não cabe pois...
+        <div class="tooltip">O mouse aqui mostrará o tooltip</div>
+    </div>
+
+</body>
+
+</html>
